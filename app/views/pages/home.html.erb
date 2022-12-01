@@ -1,0 +1,69 @@
+<div>
+  <%= render "/shared/clickable-avatar" %>
+</div>
+
+<div class="main-container">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
+    <h1> Wear </h1>
+    <h2>Say stop to fast fashion and join the Wear family </h2>
+    <% unless user_signed_in?%>
+      <%= link_to "See the products","products", id: "button-call-to-action" %>
+    <% end %>
+    <% if user_signed_in?%>
+      <div class="searchbar-home" id="seachbar-home">
+        <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
+          <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
+          <div class="button-space">
+            <%= submit_tag "Search", class: "btn-light-green"%>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <a href="#articles-list">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </div>
+
+  <div class="articles" id="articles-list">
+    <h2>Weekly News</h2>
+    <div class="card mb-4">
+      <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/0061/7562/1187/files/sam-carter-GHOiyov2TSQ-unsplash_grande.jpg?v=1583782238" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title">What's behind organic wool ?</h3>
+        <p class="card-text">Wool is natural fibre that has inherent characteristics that make it renewable and biodegradable. That is true with all woollen products ...</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    <div class="card mb-4">
+      <img class="card-img-top" src="https://www.surfmadame.com/wp-content/uploads/2017/05/CottonFarmer-1-e1493657415837-1090x728.jpg">
+      <div class="card-body">
+        <h3 class="card-title">Who is behind your outfit ?</h3>
+        <p class="card-text">
+          Garment workers around the world make everything from luxury handbags to fast fashion leggings. Here are some of their stories ... </p>
+        <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
+      </div>
+    </div>
+    <div class="card mb-4">
+      <img class="card-img-top" src="https://www.dmarge.com/wp-content/uploads/2016/04/green-suit-1.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title">What is a green outfit ?</h3>
+        <p class="card-text">
+          Eco-fashion is any brand or line that attempts to minimize the impact on the environment, and often the health of the consumers and the working conditions for the people that are making the clothes ... </p>
+        <p class="card-text"><small class="text-muted">Last updated 3 days ago</small></p>
+      </div>
+    </div>
+    <div class="card mb-4">
+      <img class="card-img-top" src="https://fashionunited.fr/XFk_iaFm0zWMv92ZkdRKiUU0AA74IHiu9ipNqZhfcsI/resize:fill:694:391:1/gravity:sm/quality:70/aHR0cHM6Ly9zdGF0aWMuZmFzaGlvbnVuaXRlZC5jb20vMjAyMDA2LzR2ZWpheGRhcndpbjEuanBn" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title"> Veja x Darwin - Concept Store </h3>
+        <p class="card-text">
+          VEJA has chosen this hybrid place to launch its new project: a space to clean, repair and recycle your old pairs ... </p>
+        <p class="card-text"><small class="text-muted">Last updated 5 days ago</small></p>
+      </div>
+    </div>
+    <h2><%= link_to "About Us", aboutus_path, id:"aboutus-header" %></h2>
+    <div class="card mb-4">
+      <img class="card-img-top"<%= cl_image_tag "IMG_9907_hqpxid"%>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "bootstrap/scss/bootstrap";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+@import "products/index";
+@import "products/show";
+@import "components/header";
+@import "components/clickable-avatar";
+
+// standard padding
+.main-container {
+  padding-bottom: 25px;
+}
+
+html {
+  scroll-behavior: smooth;
+}

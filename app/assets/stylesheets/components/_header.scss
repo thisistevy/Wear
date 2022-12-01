@@ -1,0 +1,33 @@
+.header {
+  padding: 0.65em;
+  background-size: cover;
+  padding-left: 20px;
+  background: $footer-gradient;
+}
+
+.header-content {
+  color: $background-grey;
+}
+
+.header-content-title {
+  color: $background-grey;
+  font-size: 40px;
+  margin: 0px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800
+}
+
+.header-content-title a {
+  text-decoration: none;
+  color: $background-grey;
+}
+
+.header-content-description {
+  font-family: 'lato', sans-serif;
+  font-size: 14px;
+}
+
+.header-content-title img {
+  width: 70px;
+  height: 70px;
+}

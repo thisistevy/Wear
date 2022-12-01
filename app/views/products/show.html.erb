@@ -1,0 +1,130 @@
+<%= render "/shared/header" %>
+<%= render "/shared/clickable-avatar" %>
+<div class="products-container">
+  <div class="card-show">
+  <% if @product.picture.attached? %>
+    <%= cl_image_tag(@product.picture.key, width: 370, height: 300, crop: :fill) %>
+  <% end %>
+  <div class="card-body">
+    <h2 class="card-title"><%= @product.name %></h2>
+    <p class="card-text"><%= @product.description %></p>
+  </div>
+
+  <div id="accordion">
+    <ul class="list-group list-group-flush">
+          <button class="btn btn-link card-product-description-container heading" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color:<%= @product.quality_color(@product.environment) %>;max-width: <%= @product.environment %>%;">
+            <li class="list-criteria">
+              <i class="fab fa-envira"></i> Environment: <%= @product.environment %>/100
+              <i class="fas fa-chevron-down" id="list-chevron"></i>
+            </li>
+          </button>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body-criteria">
+            <p>The environmental criterion accounts for :</p>
+            <ul>
+              <li>The proper management of waste along the chain</li>
+              <li>The water and energy consumption management</li>
+              <li>The carbon footprint</li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="btn btn-link card-product-description-container heading" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-color:<%= @product.quality_color(@product.labor) %>;max-width: <%= @product.labor %>%;">
+          <li class="list-criteria"><i class="fas fa-people-carry">
+            </i> Labor: <%= @product.labor %>/100
+            <i class="fas fa-chevron-down" id="list-chevron"></i>
+          </li>
+        </button>
+
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body-criteria">
+            <p>The Labor criterion takes into account :</p>
+            <ul>
+              <li>The proper management of waste along the chain</li>
+              <li>The water and energy consumption management</li>
+              <li>The carbon footprint</li>
+            </ul>
+          </div>
+        </div>
+
+        <button class="btn btn-link card-product-description-container heading" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color:<%= @product.quality_color(@product.animal) %>;max-width: <%= @product.animal %>%;">
+          <li class="list-criteria"><i class="fas fa-paw">
+            </i> Animal: <%= @product.animal %>/100
+            <i class="fas fa-chevron-down" id="list-chevron"></i>
+          </li>
+        </button>
+
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body-criteria">
+            <p>The animal criterion takes into account :</p>
+            <ul>
+              <li>The use of animals or use of alternative materials</li>
+              <li>The animals treatment and suffering</li>
+            </ul>
+
+          </div>
+        </div>
+
+        <button class="btn btn-link card-product-description-container heading" id="headingFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" style="background-color:<%= @product.quality_color(@product.composition) %>;max-width: <%= @product.composition %>%;">
+          <li class="list-criteria"><i class="fas fa-recycle">
+            </i> Composition: <%= @product.composition %>/100
+            <i class="fas fa-chevron-down" id="list-chevron"></i>
+          </li>
+        </button>
+
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+          <div class="card-body-criteria">
+            <p>The composition criterion accounts mostly for the materials used and if they are :</p>
+            <ul>
+              <li>Recycled/non recycled</li>
+              <li>Organic/non-organic</li>
+              <li>Treated/untreated</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </ul>
+    <div class="card-btn-product-show">
+      <a href="/" class="btn-show">Buy on Website</a>
+      <a href="#map" class="btn-show">Search your shop</a>
+  </div>
+  </div>
+
+  <div data-controller="insert-in-list">
+    <div data-insert-in-list-target="items">
+      <div id="feedbacks-list">
+        <h2>Feedbacks</h2>
+        <a href="#leave-feedback"> Write a feedback
+        <i class="fas fa-plus-circle"></i>
+        </a>
+      </div>
+      <div id="feedback-container">
+        <% if @product.feedbacks.blank? %>
+          <p> <em>Be the first to leave a feedback ! </em></p>
+        <% else %>
+        <% @product.feedbacks.order(created_at: :desc).each do |feedback|%>
+          <%=render "feedbacks/feedback", feedback: feedback %>
+        <% end %>
+      <% end %>
+        </div>
+    </div>
+  </div>
+  <div class="form-feedback" id="leave-feedback">
+    <h2>Leave a feedback</h2>
+    <%= simple_form_for([@product, @feedback], remote: true) do |f| %>
+      <%= f.label :purchase_date, 'Purchase date' %> <br>
+      <%= f.input_field :purchase_date, as: :date, html5: true, required: true %>
+      <%= f.input :comment, as: :text, input_html: {style:  'height:80px;', rows: 2}, placeholder: "Tell us what you like/dislike about your product" %>
+      <%= f.label :picture_worn, "Upload a picture of your product" %> <br>
+      <%= f.input_field :picture_worn, as: :file%>
+      <div class='submit-review-btn'>
+        <%= f.submit "Submit feedback", class:"btn-light-green" %>
+      </div>
+    <% end %>
+  </div>
+  <div id="map"
+     style="width: 100%; height: 400px; margin: auto; margin-top: 5px; border-radius: 5px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

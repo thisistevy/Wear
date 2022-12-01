@@ -1,0 +1,120 @@
+h1 {
+  padding-top: 10px;
+}
+
+.card-product {
+  margin: 15px 0px 0px 0px;
+  padding: 0px;
+  background-color: $background-grey;
+  text-align: center;
+  list-style: none;
+  width: 40vw;
+  height: 32vh;
+  box-shadow: 2px 6px 15px $shadow-light;
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+  display : block;
+  i {
+    color: $pink;
+  }
+}
+
+.card-title {
+  font-size: 1.4em;
+}
+
+.fa-leaf:before {
+  color: green;
+}
+.fa-heart{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  color: $pink;
+  font-size: 1.6em;
+}
+
+
+.card-product-img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  position: center;
+  text-align: center;
+  border-radius: 8px 8px 0px 0px;
+  max-width: 100%;
+}
+
+.card-product-description-container {
+  text-align: left;
+  background: $signature-purple;
+  height: 40%;
+  width: 100%;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.card-product-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: black;
+  font-size: 0.9em;
+  font-family:  'Lato', sans-serif;
+  padding-top: 5px;
+}
+
+.card-product-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  font-size: .7em;
+  font-weight: lighter;
+  padding-left: 5px;
+  color: black;
+  padding-right: 5px;
+  text-align: center;
+  font-family:  'Lato', sans-serif;
+}
+
+.card-product p {
+  font-family:  'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+.card-product:hover {
+  transform: scale(1.1)
+}
+
+.card-product a, a:hover, a:focus, a:active, a:visited {
+  text-decoration: none;
+}
+
+.card {
+  margin-top: 16px;
+}
+
+.card-feedbacks {
+  background: $signature-purple;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.card-environnement {
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.card-link-feedback {
+  text-decoration: none;
+  color: black;
+}
+
+.card-btn-product-show {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  font-size: 18px;
+}

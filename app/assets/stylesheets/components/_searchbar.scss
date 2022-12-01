@@ -1,0 +1,35 @@
+.search-filter {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  color: $grey;
+  border-radius: 50px;
+}
+
+.products_filter_gender {
+  width: 40%;
+}
+
+#products_filter_category {
+  width: 100%;
+}
+
+.filter-rating {
+  color: $grey;
+  text-align: left;
+  border-radius: 50px;
+  margin-top: -50px;
+}
+
+.searchbar-home {
+  width: 90%;
+  margin: auto;
+}
+
+#seachbar-home{
+  margin-top: 80px;
+}
+
+.searchbar-home:focus {
+  border-color: transparent;
+}

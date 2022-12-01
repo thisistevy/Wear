@@ -1,0 +1,34 @@
+.btn-light-green {
+  display: inline-block;
+  justify-content: center;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 8px;
+  width: 115x;
+  text-align: center;
+  text-decoration: none;
+  background: $pink;
+  border: transparent;
+}
+
+.btn-light-green:hover {
+  background: $signature-purple;
+  text-decoration: none;
+}
+
+.button-space {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.btn-show {
+  border-radius: 5px;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  background: $signature-purple;
+}
+
+.btn-link {
+  margin-bottom: 10px;
+}

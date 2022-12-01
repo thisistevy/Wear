@@ -1,0 +1,77 @@
+body {
+  background-color: $background-grey;
+}
+
+h1 {
+  text-align: center;
+  padding: (15px 30px 0px 30px)
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px $shadow-light;
+}
+
+.searchbar-home {
+  padding: 12px
+}
+
+.container-product {
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  padding: 0;
+  margin: 0;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 65px;
+}
+
+.fa-leaf {
+  color:green;
+  font-size: 20px;
+}
+
+.fa-heart {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+}
+
+.product-score {
+  color:green;
+  font-family: 'Lato', sans-serif;
+}
+
+
+#slider-value {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  opacity: 0;
+
+  background: $pink;
+  transform: translateX(-12%) rotate(45deg);
+  border:solid 3px $pink;
+
+
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  color: white;
+  position: relative;
+  top: 20px;
+  right: 3px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 1px 1px gray
+}
+
+#slider-value .value{
+  transform: rotate(-45deg);
+  top: 2px;
+  left: 5px;
+}

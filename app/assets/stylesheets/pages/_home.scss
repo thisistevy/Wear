@@ -1,0 +1,104 @@
+// Specific CSS for your home-page
+#aboutus-header {
+  text-decoration: none;
+  color: black;
+}
+
+.articles {
+  padding: 10px;
+}
+
+.articles h2 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 89vh;
+  padding: 48px 20px 20px 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Dosis', sans-serif;
+  margin-top: 10px;
+}
+
+.banner h2 {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 35px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.banner a {
+  position: absolute;
+  bottom: 4vh;
+}
+
+.banner p {
+  font-size: 25px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-top: 50px;
+}
+
+#button-call-to-action {
+  display: inline-block;
+  justify-content: center;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  background-color: $pink;
+}
+
+#button-call-to-action:hover {
+  background-color: $light-green;
+  text-decoration: none;
+}
+
+.fa-chevron-down {
+  color: white;
+  font-size: 33px;
+  position: relative;
+  bottom: 6vh;
+  animation: 2s slide-top 0.5s infinite reverse;
+  right: 50%;
+}
+
+.fa-chevron-down:before {
+  margin: -20px;
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.main-container {
+  margin-bottom: 50px;
+}
+
+.row {
+  display: flex;
+}

@@ -1,0 +1,16 @@
+<%= render "/shared/header" %>
+<%= render "/shared/clickable-avatar" %>
+
+<div class="main-container">
+  <h1>Your favorites list<hr> </h1>
+
+  <ul class="container-product">
+    <% @products.each do |product|%>
+     <div id="product-card-<%= product.id  %>">
+        <% if product.favorite?(current_user) %>
+          <%= render 'card', product: product %>
+        <% end %>
+      </div>
+    <% end %>
+  </ul>
+</div>
