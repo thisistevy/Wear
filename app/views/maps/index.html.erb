@@ -28,7 +28,9 @@
 
     <% if ENV['MAPBOX_API_KEY'].blank? %>
       <p class="alert alert-warning">
-        The Mapbox key is not configured (<code>MAPBOX_API_KEY</code> variable). The map cannot be displayed for now.
+        The map cannot be displayed: <code>MAPBOX_API_KEY</code> is not set.
+        Add your Mapbox token to the <code>.env</code> file at the root of the
+        project, then restart the server.
       </p>
     <% end %>
 

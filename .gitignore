@@ -1,0 +1,4 @@
+# Local secrets loaded by dotenv-rails (Mapbox token, etc.). Never commit these.
+.env
+.env.*
+!.env.example
