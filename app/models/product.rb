@@ -35,6 +35,16 @@ class Product < ApplicationRecord
     Favorite.find_by(user: user, product: self)
   end
 
+  def average_eco_score
+    (environment + labor + animal + composition) / 4
+  end
+
+  def average_durability_score
+    return nil if feedbacks.none?
+
+    (feedbacks.average(:rating)).round(1)
+  end
+
   def quality_color(number)
     case number
     when 80..100

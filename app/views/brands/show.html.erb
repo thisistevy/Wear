@@ -1,0 +1,29 @@
+<%= render "/shared/header" %>
+
+<div class="main-container">
+  <div class="card-show">
+    <% if @brand.logo.attached? %>
+      <%= cl_image_tag(@brand.logo.key, class: "card-product-img") %>
+    <% else %>
+      <div class="card-product-placeholder"><i class="fas fa-award"></i></div>
+    <% end %>
+    <h1><%= @brand.name %></h1>
+    <p><%= @brand.description %></p>
+    <p><i class="fas fa-map-marker-alt"></i> <%= @brand.address %></p>
+    <% if @brand.website.present? %>
+      <p><%= link_to @brand.website, @brand.website, target: "_blank", rel: "noopener" %></p>
+    <% end %>
+    <% if @brand.certifications.any? %>
+      <p class="product-score"><i class="fas fa-leaf"></i> <%= @brand.certifications.join(", ") %></p>
+    <% end %>
+  </div>
+
+  <h2>Produits de <%= @brand.name %></h2>
+  <ul class="container-product">
+    <% @products.each do |product| %>
+      <div id="product-card-<%= product.id %>">
+        <%= render "products/card", product: product %>
+      </div>
+    <% end %>
+  </ul>
+</div>

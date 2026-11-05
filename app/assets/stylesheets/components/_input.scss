@@ -3,8 +3,33 @@
 //   border: none !important;
 // }
 
+.form-control {
+  border-color: rgba(27, 67, 50, 0.15);
+}
+
 .form-control:focus {
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: rgb(206, 212, 218);
+  // Keep a visible focus indicator (accessibility) instead of removing it outright —
+  // replaces Bootstrap's blue ring with one that matches the brand accent.
+  outline: none;
+  box-shadow: $focus-ring;
+  border-color: $purple-strong;
+}
+
+.form-check {
+  // Bootstrap positions the checkbox absolutely with a fixed margin-top tuned
+  // for its default font metrics; with Work Sans this reads as misaligned
+  // against the label text. Switch to flex so they stay centered together.
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  padding-left: 0;
+
+  .form-check-input {
+    position: static;
+    margin: 0;
+  }
+
+  .form-check-label {
+    margin-bottom: 0;
+  }
 }

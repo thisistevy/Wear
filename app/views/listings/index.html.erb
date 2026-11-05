@@ -1,0 +1,22 @@
+<%= render "/shared/header" %>
+
+<div class="main-container">
+  <div class="listings-header">
+    <h1>Marketplace</h1>
+    <%= link_to "Déposer une annonce", new_listing_path, class: "btn-light-green" %>
+  </div>
+
+  <div class="searchbar-home">
+    <%= simple_form_for :listings_filter, url: listings_path, method: :get do |f| %>
+      <%= f.input :category, label: false, prompt: "Catégorie", collection: Listing.pluck(:category).uniq, required: false %>
+      <%= f.input :listing_type, label: false, prompt: "Type", collection: Listing::LISTING_TYPES, required: false %>
+      <%= submit_tag "Filtrer", class: "btn-light-green" %>
+    <% end %>
+  </div>
+
+  <ul class="container-product">
+    <% @listings.each do |listing| %>
+      <%= render "card", listing: listing %>
+    <% end %>
+  </ul>
+</div>

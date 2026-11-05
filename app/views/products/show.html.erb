@@ -1,9 +1,10 @@
 <%= render "/shared/header" %>
-<%= render "/shared/clickable-avatar" %>
 <div class="products-container">
   <div class="card-show">
   <% if @product.picture.attached? %>
-    <%= cl_image_tag(@product.picture.key, width: 370, height: 300, crop: :fill) %>
+    <%= cl_image_tag(@product.picture.key, class: "card-product-img", width: 370, height: 300, crop: :fill) %>
+  <% else %>
+    <div class="card-product-placeholder"><i class="fas fa-tshirt"></i></div>
   <% end %>
   <div class="card-body">
     <h2 class="card-title"><%= @product.name %></h2>
@@ -90,6 +91,15 @@
   </div>
   </div>
 
+  <div class="card-durability-score">
+    <h2>Score de durabilité collaboratif</h2>
+    <% if @product.average_durability_score %>
+      <p class="product-score"><i class="fas fa-star"></i> <%= @product.average_durability_score %>/5 (<%= @product.feedbacks.count %> avis)</p>
+    <% else %>
+      <p><em>Aucun avis pour le moment — soyez le premier à partager votre retour d'usage !</em></p>
+    <% end %>
+  </div>
+
   <div data-controller="insert-in-list">
     <div data-insert-in-list-target="items">
       <div id="feedbacks-list">
@@ -115,6 +125,9 @@
       <%= f.label :purchase_date, 'Purchase date' %> <br>
       <%= f.input_field :purchase_date, as: :date, html5: true, required: true %>
       <%= f.input :comment, as: :text, input_html: {style:  'height:80px;', rows: 2}, placeholder: "Tell us what you like/dislike about your product" %>
+      <%= render "feedbacks/star_field", f: f, field: :rating, question: "Note globale de durabilité" %>
+      <%= render "feedbacks/star_field", f: f, field: :wash_resistance, question: "Résistance aux lavages" %>
+      <%= render "feedbacks/star_field", f: f, field: :wear_over_time, question: "Usure dans le temps" %>
       <%= f.label :picture_worn, "Upload a picture of your product" %> <br>
       <%= f.input_field :picture_worn, as: :file%>
       <div class='submit-review-btn'>

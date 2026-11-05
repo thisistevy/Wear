@@ -3,7 +3,7 @@
   text-align: left;
   justify-content: space-between;
   color: $grey;
-  border-radius: 50px;
+  border-radius: $radius-pill;
 }
 
 .products_filter_gender {
@@ -17,8 +17,8 @@
 .filter-rating {
   color: $grey;
   text-align: left;
-  border-radius: 50px;
-  margin-top: -50px;
+  border-radius: $radius-pill;
+  margin-top: -$space-8;
 }
 
 .searchbar-home {

@@ -1,8 +1,21 @@
+// Header height is fixed/known so the body can be pushed down by exactly
+// that amount — keep both in sync if this changes.
+// 56px matches the standard mobile app bar height (Material top app bar).
+$header-height: 56px;
+
 .header {
-  padding: 0.65em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1020;
+  height: $header-height;
+  display: flex;
+  align-items: center;
   background-size: cover;
-  padding-left: 20px;
+  padding: $space-2 $space-5;
   background: $footer-gradient;
+  box-shadow: 0 2px 10px rgba(27, 67, 50, 0.25);
 }
 
 .header-content {
@@ -11,10 +24,18 @@
 
 .header-content-title {
   color: $background-grey;
-  font-size: 40px;
-  margin: 0px;
-  font-family: 'Dosis', sans-serif;
-  font-weight: 800
+  font-size: 22px;
+  margin: 0;
+  font-family: $headers-font;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+
+  i {
+    color: $sage;
+    font-size: 0.8em;
+  }
 }
 
 .header-content-title a {
@@ -22,12 +43,20 @@
   color: $background-grey;
 }
 
-.header-content-description {
-  font-family: 'lato', sans-serif;
-  font-size: 14px;
+.header-content-title a:focus-visible {
+  outline: none;
+  box-shadow: $focus-ring;
+  border-radius: $radius-sm;
 }
 
 .header-content-title img {
-  width: 70px;
-  height: 70px;
+  width: 36px;
+  height: 36px;
+}
+
+// Compensates the fixed header so page content isn't hidden under it.
+// Applied on body (not per-page) since the header partial is rendered
+// inside many different views with different wrapper structures.
+body {
+  padding-top: $header-height;
 }

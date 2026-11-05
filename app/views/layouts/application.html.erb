@@ -13,14 +13,13 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 
-    <script src="https://cdn.jsdelivr.net/npm/scandit-sdk@5.x"></script>
-
     <%= favicon_link_tag asset_path('favicon.png') %>
     <%= stylesheet_pack_tag 'application' %>
   </head>
 
   <body>
       </div>
+    <%= render "/shared/clickable-avatar" %>
     <%= yield %>
         <%= render 'shared/flashes' %>
         <%= render 'shared/footer' %>

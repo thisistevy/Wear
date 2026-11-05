@@ -1,0 +1,6 @@
+<h2><%= point.name %></h2>
+<p><%= point.point_type.capitalize %></p>
+<p><%= point.address %></p>
+<% if point.description.present? %>
+  <p><%= point.description %></p>
+<% end %>

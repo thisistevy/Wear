@@ -1,12 +1,19 @@
-<div class="log-out-avatar dropdown">
-  <button class="btn " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <div class="log-out-avatar dropdown">
+    <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <% if current_user.avatar.attached? %>
-        <%= cl_image_tag(current_user.avatar.key, crop: :fill) %>
+        <%= cl_image_tag(current_user.avatar.key, crop: :fill, class: "avatar-bordered") %>
+      <% else %>
+        <i class="fas fa-user"></i>
       <% end %>
-   <% end %>
-  </button>
-  <div class="dropdown-menu dropdown-menu-right">
-    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    </button>
+    <div class="dropdown-menu dropdown-menu-right">
+      <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+      <%= link_to "Mes annonces", listings_path(mine: true), class: "dropdown-item" %>
+      <%= link_to "Marques éco-friendly", brands_path, class: "dropdown-item" %>
+      <%= link_to "Mes favoris", favorites_path, class: "dropdown-item" %>
+      <div class="dropdown-divider"></div>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    </div>
   </div>
-</div>
+<% end %>

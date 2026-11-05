@@ -1,7 +1,7 @@
 // Specific CSS for your home-page
 #aboutus-header {
   text-decoration: none;
-  color: black;
+  color: $moss;
 }
 
 .articles {
@@ -14,70 +14,149 @@
   padding-bottom: 10px;
 }
 
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.pillar-card {
+  display: block;
+  padding: $space-5 $space-4;
+  border-radius: $radius-md;
+  background-color: $white;
+  box-shadow: $shadow-md;
+  border: 1px solid rgba(27, 67, 50, 0.06);
+  text-align: center;
+  text-decoration: none;
+  color: $gray;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: $radius-pill;
+    background: linear-gradient(135deg, $sage 0%, $mint 100%);
+    font-size: 24px;
+    color: $forest;
+    margin-bottom: $space-3;
+  }
+
+  h3 {
+    font-family: $headers-font;
+    font-size: 19px;
+    margin-bottom: $space-2;
+    color: $forest;
+  }
+
+  p {
+    font-size: 14px;
+    opacity: 0.75;
+    margin: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-dark 0 10px 20px -8px;
+    text-decoration: none;
+    color: $gray;
+  }
+}
+
 .banner {
+  position: relative; // anchors .banner a — it previously had no positioned
+                       // ancestor, so its "bottom" offset was relative to
+                       // the nearest positioned element up the tree instead
+                       // of the banner itself.
   background-size: cover;
   background-position: center;
-  height: 89vh;
-  padding: 48px 20px 20px 20px;
+  // Falls back to the forest/moss gradient on its own if the background
+  // image (set inline, per-product/brand asset) fails to load.
+  background-color: $forest;
+  // Reduced from 70vh — the hero was taking up most of the screen before
+  // any actual content (pillar cards) was visible.
+  min-height: 40vh;
+  padding: 32px 20px 16px 20px;
   text-align: center;
+  border-radius: 0 0 $radius-md $radius-md;
 }
 
 .banner h1 {
-  margin-bottom: 20px;
+  margin-bottom: $space-4;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 60px;
+  // clamp() scales the hero title between mobile and desktop instead of a
+  // fixed size that overflowed small screens. Capped lower than before
+  // since "Wear the people" is longer than the previous one-word title.
+  font-size: clamp(28px, 6vw, 44px);
   font-weight: bold;
-  font-family: 'Dosis', sans-serif;
-  margin-top: 10px;
+  font-family: $headers-font;
+  margin-top: $space-2;
 }
 
 .banner h2 {
   color: white;
-  font-size: 40px;
-  font-weight: 600;
-  margin-bottom: 25px;
-  margin-top: 35px;
+  font-size: clamp(16px, 3vw, 22px);
+  font-weight: 500;
   opacity: 0.9;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 480px;
 }
 
 .banner a {
   position: absolute;
-  bottom: 4vh;
+  bottom: $space-5;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .banner p {
-  font-size: 25px;
+  font-size: clamp(16px, 3vw, 25px);
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-align: center;
-  margin-top: 50px;
+  margin-top: $space-7;
 }
 
 #button-call-to-action {
   display: inline-block;
   justify-content: center;
+  font-family: $accent-font;
+  font-weight: 600;
   font-size: 15px;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: $radius-pill;
+  padding: $space-3;
   width: 200px;
   text-align: center;
   text-decoration: none;
-  background-color: $pink;
+  color: $forest;
+  background-color: $sage;
+  box-shadow: $shadow-sm;
 }
 
 #button-call-to-action:hover {
-  background-color: $light-green;
+  background-color: $mint;
   text-decoration: none;
+  color: $forest;
+}
+
+#button-call-to-action:focus-visible {
+  outline: none;
+  box-shadow: $focus-ring;
 }
 
 .fa-chevron-down {
   color: white;
   font-size: 33px;
   position: relative;
-  bottom: 6vh;
+  // Fixed offset instead of 6vh — that was tuned for the old 70vh banner
+  // and became proportionally too large once the banner was shrunk.
+  bottom: 10px;
   animation: 2s slide-top 0.5s infinite reverse;
   right: 50%;
 }

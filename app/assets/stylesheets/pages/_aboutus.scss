@@ -1,18 +1,19 @@
 .aboutus-container {
   margin: auto;
-  width: 90vw;
+  width: 90%;
+  max-width: 700px;
   margin-bottom: 100px;
   text-align: center;
 
   p {
-    margin-top: 15px;
+    margin-top: $space-4;
   }
 
   h1 {
-font-size: 30px
+    font-size: 30px;
   }
 }
 
 .aboutus-button {
-  margin-top: 40px;
+  margin-top: $space-7;
 }

@@ -6,6 +6,52 @@
 .feedback-text {
   background-color: $light-gray;
   padding: 18px;
-  border-radius: 5px;
-  box-shadow: 5px 5px 2px 1px $shadow-light;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-sm;
+}
+
+.card-durability-score {
+  margin-top: $space-4;
+  text-align: center;
+}
+
+.feedback-ratings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  font-size: 0.85em;
+  color: $gray;
+}
+
+.star-rating-group {
+  margin: $space-2 0;
+}
+
+.star-rating-label {
+  margin-bottom: $space-1;
+  font-size: 0.9em;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  input {
+    display: none;
+  }
+
+  label.star {
+    font-size: 1.8em;
+    line-height: 1;
+    color: $light-gray;
+    cursor: pointer;
+    padding: 0 2px;
+  }
+
+  input:checked ~ label.star,
+  label.star:hover,
+  label.star:hover ~ label.star {
+    color: $pink;
+  }
 }

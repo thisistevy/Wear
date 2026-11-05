@@ -1,0 +1,22 @@
+<%= render "/shared/header" %>
+
+<div class="main-container">
+  <h1>Carte</h1>
+  <div class="map-legend">
+    <span><i class="fas fa-circle" style="color:#AAD576"></i> Boutiques éco-friendly</span>
+    <span><i class="fas fa-circle" style="color:#4A90D9"></i> Points de collecte</span>
+    <span><i class="fas fa-circle" style="color:#F4A259"></i> Points de recyclage</span>
+  </div>
+
+  <% if ENV['MAPBOX_API_KEY'].blank? %>
+    <p class="alert alert-warning">
+      La clé Mapbox n'est pas configurée (variable <code>MAPBOX_API_KEY</code>). La carte ne peut pas s'afficher pour le moment.
+    </p>
+  <% end %>
+
+  <div id="map"
+     style="width: 100%; height: 600px; margin: auto; margin-top: 5px; border-radius: 5px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>

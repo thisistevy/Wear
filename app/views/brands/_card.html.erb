@@ -1,0 +1,18 @@
+<div class="card-product">
+  <%= link_to brand_path(brand) do %>
+    <% if brand.logo.attached? %>
+      <%= cl_image_tag(brand.logo.key, class: "card-product-img") %>
+    <% else %>
+      <div class="card-product-placeholder"><i class="fas fa-award"></i></div>
+    <% end %>
+    <div class="card-product-description-container">
+      <p class="card-product-title"><%= brand.name %></p>
+      <div class="card-product-description trait_below">
+        <p><%= brand.description %></p>
+        <% if brand.certifications.any? %>
+          <p class="product-score"><i class="fas fa-leaf"></i> <%= brand.certifications.join(", ") %></p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

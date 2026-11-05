@@ -10,6 +10,7 @@ class Feedback < ApplicationRecord
   # validation
   validates :purchase_date, presence: true
   validates :comment, length: { minimum: 12, message: "comment must be at least 12 character-long" }
+  validates :rating, :wash_resistance, :wear_over_time, inclusion: { in: 1..5 }
   # validates :product_id, uniqueness: { scope: :user_id, message: 'You already reviewed this product'}
 
   validate :purchase_date_cannot_be_in_the_futur

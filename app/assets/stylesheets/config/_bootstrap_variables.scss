@@ -11,14 +11,17 @@ $font-size-base: 1rem;
 
 // Colors
 $body-color: $gray;
-$primary:    black;
+$primary:    $moss;
+$secondary:  $sand;
 $success:    $green;
 $info:       $yellow;
 $danger:     $red;
 $warning:    $orange;
+$link-color: $moss;
 
-// Buttons & inputs' radius
-$border-radius-lg: 2px;
-$border-radius-sm: 2px;
+// Buttons & inputs' radius (shared token, see config/_tokens.scss)
+$border-radius:     $radius-md;
+$border-radius-lg:  $radius-md;
+$border-radius-sm:  $radius-sm;
 
 // Override other variables below!

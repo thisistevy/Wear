@@ -9,6 +9,12 @@ const fitMapToMarkers = (map, markers) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 });
 };
 
+const MARKER_COLORS = {
+  boutique: '#AAD576',
+  collecte: '#4A90D9',
+  recyclage: '#F4A259',
+};
+
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
 
@@ -21,12 +27,14 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window);
-      new mapboxgl.Marker()
+      new mapboxgl.Marker({ color: MARKER_COLORS[marker.type] || MARKER_COLORS.boutique })
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(map);
     });
-    fitMapToMarkers(map, markers);
+    if (markers.length > 0) {
+      fitMapToMarkers(map, markers);
+    }
     map.addControl(new MapboxGeocoder({
       accessToken: mapboxgl.accessToken,
       mapboxgl: mapboxgl

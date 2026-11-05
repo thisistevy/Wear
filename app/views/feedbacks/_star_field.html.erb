@@ -1,0 +1,10 @@
+<%# locals: f (form builder), field (symbol), question (string) %>
+<div class="star-rating-group">
+  <p class="star-rating-label"><%= question %></p>
+  <div class="star-rating">
+    <% (1..5).to_a.reverse.each do |i| %>
+      <%= f.radio_button field, i, required: true %>
+      <%= f.label field, "★".html_safe, value: i, class: "star" %>
+    <% end %>
+  </div>
+</div>

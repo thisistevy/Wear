@@ -1,22 +1,22 @@
 .avatar {
   width: 40px;
-  border-radius: 50%;
+  border-radius: $radius-pill;
   object-fit: cover;
-  height: 40px
+  height: 40px;
 }
 .avatar-large {
   width: 56px;
-  border-radius: 50%;
+  border-radius: $radius-pill;
 }
 .avatar-bordered {
   width: 40px;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border-radius: $radius-pill;
+  box-shadow: $shadow-sm;
   border: white 1px solid;
 }
 .avatar-square {
   width: 40px;
-  border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border-radius: 0;
+  box-shadow: $shadow-sm;
   border: white 1px solid;
 }

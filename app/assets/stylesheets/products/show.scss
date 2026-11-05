@@ -1,26 +1,55 @@
 .products-container {
   margin: auto;
-  width: 90vw;
-  margin-bottom: 100px;
+  width: 90%;
+  max-width: 900px;
+  margin-bottom: $space-7 * 2.5;
 }
 
 .card-show {
-  margin-top: 15px;
+  margin-top: $space-4;
+  margin-bottom: $space-5;
+  background: $background-grey;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  padding: $space-5;
+
+  .card-product-img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: $radius-md;
+    margin-bottom: $space-4;
+  }
+
+  .card-product-placeholder {
+    height: 180px;
+    border-radius: $radius-md;
+    margin-bottom: $space-4;
+
+    i {
+      font-size: 3.5em;
+    }
+  }
+
+  h1 {
+    font-family: $headers-font;
+    color: $forest;
+  }
 }
 
 .form-feedback {
-  background: $signature-purple;
-  padding: 18px;
-  border-radius: 5px;
+  background: $mint;
+  padding: $space-4;
+  border-radius: $radius-md;
   margin: auto;
 }
 
 .show-feedback {
-  margin-top: 20px;
-  background: $signature-purple;
-  padding: 18px;
-  border-radius: 5px;
-  border: 40px;
+  margin-top: $space-5;
+  background: $mint;
+  padding: $space-4;
+  border-radius: $radius-md;
 }
 
 h2 {
@@ -52,11 +81,11 @@ label {
 
 .list-criteria {
   list-style-type: none;
-  color: black;
+  color: $gray;
   text-decoration: none;
   font-size: 18px;
-  min-width: 83vw;
-  padding-left: 10px;
+  width: 100%;
+  padding-left: $space-3;
   display: flex;
   justify-content: space-between;
 }
@@ -65,9 +94,22 @@ label {
   text-decoration: none;
 }
 
-a, a:hover, a:focus, a:active, a:visited {
+// Scoped to this page's container — the bare "a, a:hover, ..." selector
+// previously here had no scope, so it silently stripped underlines and
+// recolored every link on every page in the app, not just this one.
+.products-container a,
+.products-container a:hover,
+.products-container a:focus,
+.products-container a:active,
+.products-container a:visited {
   text-decoration: none;
-  color: #101010;
+  color: $gray;
+}
+
+.products-container a:focus-visible {
+  outline: none;
+  box-shadow: $focus-ring;
+  border-radius: $radius-sm;
 }
 
 #feedbacks-list {
@@ -93,15 +135,17 @@ a, a:hover, a:focus, a:active, a:visited {
 }
 
 .card-product-description-container {
-  .btn {
-  outline: none !important;
-  box-shadow: none !important;
-  border-color: rgb(206, 212, 218);
+  .btn:focus {
+    // Same fix as components/_input.scss: a visible focus ring instead
+    // of removing focus indication on these accordion toggle buttons.
+    outline: none;
+    box-shadow: $focus-ring;
+    border-color: $purple-strong;
   }
 }
 
 #list-chevron {
-  color: black;
+  color: $forest;
   font-size: 1em;
   bottom: -3px;
   animation: none;

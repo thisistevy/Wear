@@ -1,24 +1,40 @@
-// Define variables for your color scheme
+// Eco-friendly, modern color palette.
+// Variable names are kept stable across the app even where the hue
+// changed meaning (e.g. $signature-purple is now a soft green tint) so
+// that every component picks up the new theme without being rewritten.
 
-// For example:
-$red: #FD1015;
-$yellow: #FFC65A;
-$orange: #E67E22;
-$green: #1EDD88;
-$gray: #0E0000;
-$light-gray: #F4F4F4;
-$purple: radial-gradient(circle, rgba(169,167,255,0.2) 0%, rgba(169,167,255,0.4) 0%, rgba(169,167,255,0.3) 100%, rgba(169,167,255,0.2) 100%);
-$purple-strong: rgb(169,167,255);
-$signature-purple: radial-gradient(circle, rgba(174, 167, 255,0.22) 0%, rgba(169, 167, 255,0.23) 14%, rgba(169, 167, 255,0.18) 100%, rgba(181, 180, 243,0.27) 31%);
-$pink: #FFCAEA;
-$light-green: #DDFFF8;
-$background-grey: #FFFFFE;
-$shadow-light: #dcd7d7ed;
-$shadow-dark: #cacacaed;
-$signature-gradient: linear-gradient(180deg, rgba(56, 120, 141, 0.11) 0%, rgba(249, 197, 236, 0.342) 100%);
-$footer-gradient: linear-gradient(rgba(199,197,249,1) 100%, rgba(67,132,156,1) 17%);
-$grey: rgb(92, 92, 92);
-$slider-red: #ee6055;
+// Core greens
+$forest: #1B4332;   // deepest green - header/footer gradients, headings
+$moss: #2D6A4F;     // mid green - primary buttons, links
+$leaf: #40916C;     // vibrant eco green - success states, icons, CTAs
+$sage: #95D5B2;     // soft green - secondary accents
+$mint: #D8F3DC;     // very light green - card accent backgrounds
+
+// Neutrals & warm accents
+$cream: #FAF7F0;        // warm off-white - page background
+$sand: #EFEAD9;         // warm beige - secondary surfaces
+$terracotta: #E08E6D;   // warm accent - highlights, warnings
+$charcoal: #27342E;     // body text
+
+// Backward-compatible aliases (every variable name used elsewhere is kept alive)
+$red: #D64550;
+$yellow: #F2C14E;
+$orange: $terracotta;
+$green: $leaf;
+$gray: $charcoal;
+$light-gray: $cream;
+$purple: radial-gradient(circle, rgba(64,145,108,0.18) 0%, rgba(64,145,108,0.28) 50%, rgba(64,145,108,0.18) 100%);
+$purple-strong: $moss;
+$signature-purple: radial-gradient(circle, rgba(149,213,178,0.35) 0%, rgba(216,243,220,0.55) 60%, rgba(239,234,217,0.4) 100%);
+$pink: #E0668C;
+$light-green: $mint;
+$background-grey: #FFFFFF;
+$shadow-light: rgba(27, 67, 50, 0.08);
+$shadow-dark: rgba(27, 67, 50, 0.2);
+$signature-gradient: linear-gradient(180deg, rgba(64, 145, 108, 0.12) 0%, rgba(250, 247, 240, 0.4) 100%);
+$footer-gradient: linear-gradient(135deg, $forest 0%, $moss 100%);
+$grey: rgba(39, 52, 46, 0.65);
+$slider-red: #E07A5F;
 $slider-orange: #F4A259;
-$slider-yellow: #FFD670;
-$silder-green: #AAD576;
+$slider-yellow: #F2C14E;
+$silder-green: $leaf;

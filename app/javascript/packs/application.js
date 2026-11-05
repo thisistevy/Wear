@@ -29,7 +29,7 @@ import "bootstrap";
 import "controllers";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initSlider } from '../plugins/slider';
-import { initScan } from '../plugins/init_scancode'
+import { initScan } from '../plugins/init_scan'
 
  document.addEventListener('turbolinks:load', () => {
   initMapbox();

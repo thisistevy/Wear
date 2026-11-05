@@ -1,0 +1,22 @@
+current directory: /Users/LETY_Isabelle/Documents/Perso/Wear/vendor/bundle/ruby/2.6.0/gems/puma-4.3.8/ext/puma_http11
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20261105-16508-11gmnsa.rb extconf.rb
+checking for BIO_read() in -lcrypto... no
+checking for BIO_read() in -llibeay32... no
+creating Makefile
+
+current directory: /Users/LETY_Isabelle/Documents/Perso/Wear/vendor/bundle/ruby/2.6.0/gems/puma-4.3.8/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /Users/LETY_Isabelle/Documents/Perso/Wear/vendor/bundle/ruby/2.6.0/gems/puma-4.3.8/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+compiling puma_http11.c
+linking shared-object puma/puma_http11.bundle
+ld: warning: search path '/AppleInternal/Library/BuildRoots/4ff29661-3588-11ef-9513-e2437461156c/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.6.Internal.sdk/usr/local/libressl-by-deployment-target/13.0/lib' not found
+ld: warning: search path '/AppleInternal/Library/BuildRoots/4ff29661-3588-11ef-9513-e2437461156c/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.6.Internal.sdk/usr/local/lib' not found
+
+current directory: /Users/LETY_Isabelle/Documents/Perso/Wear/vendor/bundle/ruby/2.6.0/gems/puma-4.3.8/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20261105-16508-15tp2ih/puma

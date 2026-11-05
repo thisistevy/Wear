@@ -59,4 +59,10 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # LOCAL WORKAROUND: this machine's system Ruby links against LibreSSL 3.3.6,
+  # which fails on AES-256-GCM's authenticated data handling (used by Rails 6's
+  # default encrypted cookies). Not a real app setting change — remove before
+  # committing, or ignore when diffing/reverting the dev-server workaround.
+  config.action_dispatch.use_authenticated_cookie_encryption = false
 end

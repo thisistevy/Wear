@@ -1,0 +1,57 @@
+.auth-page {
+  // Header is now fixed and compensated via body padding-top (56px), so
+  // this only needs to account for the fixed footer (56px) below it.
+  min-height: calc(100vh - 112px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $cream;
+  padding: $space-6 $space-4;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: $background-grey;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  padding: $space-6 $space-5;
+  text-align: center;
+
+  h2 {
+    font-family: $headers-font;
+    color: $forest;
+    margin-bottom: $space-5;
+  }
+
+  .form-inputs {
+    text-align: left;
+  }
+
+  .form-actions {
+    margin-top: $space-4;
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: $space-6;
+    font-size: 16px;
+  }
+
+  a {
+    color: $moss;
+  }
+}
+
+.auth-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: $radius-pill;
+  background: linear-gradient(135deg, $sage 0%, $mint 100%);
+  color: $forest;
+  font-size: 24px;
+  margin-bottom: $space-3;
+}

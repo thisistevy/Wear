@@ -1,0 +1,22 @@
+<div class="card-product">
+  <%= link_to listing_path(listing) do %>
+    <% if listing.picture.attached? %>
+      <%= cl_image_tag(listing.picture.key, class: "card-product-img") %>
+    <% else %>
+      <div class="card-product-placeholder"><i class="fas fa-recycle"></i></div>
+    <% end %>
+    <div class="card-product-description-container">
+      <p class="card-product-title"><%= listing.title %></p>
+      <div class="card-product-description trait_below">
+        <p><%= listing.condition %></p>
+        <p class="product-score">
+          <% if listing.listing_type == "vente" %>
+            <i class="fas fa-tag"></i> <%= listing.price.to_i %> €
+          <% else %>
+            <i class="fas fa-recycle"></i> <%= listing.listing_type %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

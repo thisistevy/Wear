@@ -1,8 +1,9 @@
 <%= render "/shared/header" %>
-<%= render "/shared/clickable-avatar" %>
 <div class= main-container>
   <h2 id="barcode">Scan your product</h2>
-  <div id="scandit-barcode-picker"></div>
+  <div class="scan-video-wrapper">
+    <video id="scan-video" class="scan-video"></video>
+  </div>
   <div class="d-none">
     <%= simple_form_for :scan, url: scans_path, method: :post do |f| %>
         <%= f.input :barcode, input_html: {value: "coco"} %>

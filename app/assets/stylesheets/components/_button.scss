@@ -1,34 +1,63 @@
 .btn-light-green {
   display: inline-block;
   justify-content: center;
+  font-family: $accent-font;
+  font-weight: 600;
   font-size: 15px;
-  border-radius: 5px;
-  padding: 8px;
-  width: 115x;
+  border-radius: $radius-pill;
+  padding: $space-2 $space-5;
+  min-width: 115px;
   text-align: center;
   text-decoration: none;
-  background: $pink;
-  border: transparent;
+  color: $background-grey;
+  background: $moss;
+  border: 2px solid $moss;
+  box-shadow: $shadow-sm;
+  transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 .btn-light-green:hover {
-  background: $signature-purple;
+  background: $forest;
+  border-color: $forest;
+  color: $background-grey;
   text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.btn-light-green:focus-visible,
+.btn-show:focus-visible {
+  outline: none;
+  box-shadow: $focus-ring;
 }
 
 .button-space {
-  margin-top: 15px;
+  margin-top: $space-4;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: $space-3;
+  flex-wrap: wrap;
 }
 
 .btn-show {
-  border-radius: 5px;
-  padding: 8px;
+  display: inline-block;
+  border-radius: $radius-pill;
+  padding: $space-2 $space-4;
   text-align: center;
   text-decoration: none;
-  background: $signature-purple;
+  font-weight: 600;
+  color: $moss;
+  background: $background-grey;
+  border: 2px solid $sage;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.btn-show:hover {
+  background: $mint;
+  text-decoration: none;
+  color: $forest;
 }
 
 .btn-link {
-  margin-bottom: 10px;
+  margin-bottom: $space-3;
 }

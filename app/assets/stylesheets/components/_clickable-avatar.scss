@@ -1,14 +1,64 @@
 .log-out-avatar {
-  position: absolute;
-  top: 20px;
-  right: 12px;
+  // Fixed (not absolute) so it stays pinned top-right on every page,
+  // regardless of that page's own layout/scroll position. Vertically
+  // centered within the fixed header's 56px height.
+  position: fixed;
+  top: 10px;
+  right: 16px;
+  z-index: 1031;
+}
+
+.log-out-avatar .btn {
+  // A solid, shadowed circle so this reads as its own floating control —
+  // without it, the bare icon blended into whatever was behind it
+  // (dark hero image, page content, etc.). Sized like a standard icon
+  // button rather than a large avatar.
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: $radius-pill;
+  background: $background-grey;
+  box-shadow: $shadow-md;
+  border: 2px solid $mint;
+}
+
+.log-out-avatar .btn:hover,
+.log-out-avatar .btn:focus {
+  border-color: $sage;
+  box-shadow: $shadow-dark 0 4px 12px -2px;
 }
 
 .log-out-avatar img {
-  width: 45px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   object-fit: cover;
-  height: 45px;
-  margin-top: -5px;
-  margin-right: -8px;
+  margin: 0;
+}
+
+.log-out-avatar .fa-user {
+  font-size: 16px;
+  color: $moss;
+}
+
+.log-out-avatar .dropdown-menu {
+  margin-top: $space-2;
+  border: none;
+  border-radius: $radius-md;
+  box-shadow: $shadow-md;
+  padding: $space-2 0;
+}
+
+.log-out-avatar .dropdown-item {
+  font-family: $accent-font;
+  padding: $space-2 $space-4;
+
+  &:hover,
+  &:focus {
+    background-color: $mint;
+    color: $forest;
+  }
 }

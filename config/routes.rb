@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :favorites, only: %i[index create destroy]
+  resources :brands, only: %i[index show]
+  resources :listings
+  get 'map', to: 'maps#index'
 end

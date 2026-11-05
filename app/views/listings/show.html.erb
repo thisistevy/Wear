@@ -1,0 +1,30 @@
+<%= render "/shared/header" %>
+
+<div class="main-container">
+  <div class="card-show">
+    <% if @listing.picture.attached? %>
+      <%= cl_image_tag(@listing.picture.key, class: "card-product-img") %>
+    <% else %>
+      <div class="card-product-placeholder"><i class="fas fa-recycle"></i></div>
+    <% end %>
+    <h1><%= @listing.title %></h1>
+    <p><%= @listing.description %></p>
+    <p><i class="fas fa-tshirt"></i> <%= @listing.category %> &middot; <%= @listing.gender %> &middot; <%= @listing.condition %></p>
+    <p class="product-score">
+      <% if @listing.listing_type == "vente" %>
+        <i class="fas fa-tag"></i> <%= @listing.price.to_i %> €
+      <% else %>
+        <i class="fas fa-recycle"></i> <%= @listing.listing_type %>
+      <% end %>
+    </p>
+    <p>Statut : <%= @listing.status %></p>
+    <p>Publié par <%= @listing.user.username %></p>
+
+    <% if @listing.user == current_user %>
+      <div class="button-space">
+        <%= link_to "Modifier", edit_listing_path(@listing), class: "btn-light-green" %>
+        <%= link_to "Supprimer", listing_path(@listing), method: :delete, data: { confirm: "Supprimer cette annonce ?" }, class: "btn-light-green" %>
+      </div>
+    <% end %>
+  </div>
+</div>

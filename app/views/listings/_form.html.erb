@@ -1,0 +1,14 @@
+<%= simple_form_for @listing do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :title %>
+  <%= f.input :description, as: :text %>
+  <%= f.input :category %>
+  <%= f.input :gender, collection: ["Woman", "Man"] %>
+  <%= f.input :condition, collection: Listing::CONDITIONS %>
+  <%= f.input :listing_type, collection: Listing::LISTING_TYPES %>
+  <%= f.input :price %>
+  <%= f.input :picture, as: :file %>
+
+  <%= f.submit "Enregistrer", class: "btn-light-green" %>
+<% end %>

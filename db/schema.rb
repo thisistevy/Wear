@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_01_132330) do
+ActiveRecord::Schema.define(version: 2026_11_05_111645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,21 @@ ActiveRecord::Schema.define(version: 2021_09_01_132330) do
     t.string "address"
     t.float "latitude"
     t.float "longitude"
+    t.string "certifications", default: [], array: true
+    t.string "website"
+  end
+
+  create_table "collection_points", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "point_type"
+    t.text "description"
+    t.bigint "brand_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_collection_points_on_brand_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -72,8 +87,26 @@ ActiveRecord::Schema.define(version: 2021_09_01_132330) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.date "purchase_date"
+    t.integer "rating"
+    t.integer "wash_resistance"
+    t.integer "wear_over_time"
     t.index ["product_id"], name: "index_feedbacks_on_product_id"
     t.index ["user_id"], name: "index_feedbacks_on_user_id"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "title"
+    t.text "description"
+    t.decimal "price", precision: 8, scale: 2
+    t.string "condition"
+    t.string "category"
+    t.string "gender"
+    t.string "listing_type"
+    t.string "status", default: "disponible"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_listings_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -114,9 +147,11 @@ ActiveRecord::Schema.define(version: 2021_09_01_132330) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "articles", "users"
+  add_foreign_key "collection_points", "brands"
   add_foreign_key "favorites", "products"
   add_foreign_key "favorites", "users"
   add_foreign_key "feedbacks", "products"
   add_foreign_key "feedbacks", "users"
+  add_foreign_key "listings", "users"
   add_foreign_key "products", "brands"
 end

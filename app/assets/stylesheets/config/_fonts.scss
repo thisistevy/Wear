@@ -1,11 +1,11 @@
-// Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Armata&family=GFS+Neohellenic:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+// Import Google fonts actually used in the stylesheets below.
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap');
+
 // Define fonts for body and headers
-$body-font: "Armata", sans-serif;
-$headers-font: 'Dosis', sans-serif;
+$body-font: "Work Sans", sans-serif;
+$headers-font: "Fraunces", serif;
+$accent-font: "Work Sans", sans-serif; // card titles/descriptions
+$map-font: "Work Sans", sans-serif;    // Mapbox popups
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

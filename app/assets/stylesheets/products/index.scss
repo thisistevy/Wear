@@ -13,7 +13,7 @@ h1 a {
 
 hr {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 4px 12px $shadow-light;
+  box-shadow: $shadow-md;
 }
 
 .searchbar-home {
@@ -22,7 +22,10 @@ hr {
 
 .container-product {
   display: grid;
-  grid-template-columns: repeat(2, 0fr);
+  // Auto-fit as many 280px (max card width) columns as the viewport allows,
+  // instead of a fixed 2 columns that crowded cards on narrow screens.
+  grid-template-columns: repeat(auto-fit, minmax(140px, 280px));
+  gap: $space-4;
   padding: 0;
   margin: 0;
   justify-content: space-around;
@@ -31,7 +34,7 @@ hr {
 }
 
 .fa-leaf {
-  color:green;
+  color: $leaf;
   font-size: 20px;
 }
 
@@ -42,8 +45,8 @@ hr {
 }
 
 .product-score {
-  color:green;
-  font-family: 'Lato', sans-serif;
+  color: $leaf;
+  font-family: $accent-font;
 }
 
 
