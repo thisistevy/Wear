@@ -1,7 +1,7 @@
 .auth-page {
-  // Header is now fixed and compensated via body padding-top (56px), so
-  // this only needs to account for the fixed footer (56px) below it.
-  min-height: calc(100vh - 112px);
+  // Fill the viewport minus both fixed bars, so the form stays optically
+  // centred in the space that is actually visible.
+  min-height: calc(100vh - #{$header-height} - #{$nav-height});
   display: flex;
   align-items: center;
   justify-content: center;

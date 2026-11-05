@@ -8,6 +8,13 @@ $space-6: 32px;
 $space-7: 40px;
 $space-8: 50px;
 
+// Fixed app bars. 56px is the standard mobile bar height (Material top app
+// bar / bottom navigation). Both bars are position:fixed, so the body is
+// inset by exactly these values — keep them here so the bars and the layout
+// that compensates for them can never drift apart.
+$header-height: 56px;
+$nav-height: 56px;
+
 // Radius scale
 $radius-sm: 4px;   // buttons, inputs
 $radius-md: 8px;   // cards

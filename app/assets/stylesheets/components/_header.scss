@@ -1,8 +1,3 @@
-// Header height is fixed/known so the body can be pushed down by exactly
-// that amount — keep both in sync if this changes.
-// 56px matches the standard mobile app bar height (Material top app bar).
-$header-height: 56px;
-
 .header {
   position: fixed;
   top: 0;
@@ -52,11 +47,4 @@ $header-height: 56px;
 .header-content-title img {
   width: 36px;
   height: 36px;
-}
-
-// Compensates the fixed header so page content isn't hidden under it.
-// Applied on body (not per-page) since the header partial is rendered
-// inside many different views with different wrapper structures.
-body {
-  padding-top: $header-height;
 }

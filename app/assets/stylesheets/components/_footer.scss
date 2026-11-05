@@ -1,9 +1,8 @@
 .footer {
-  // 56px matches the standard mobile bottom nav bar height.
   background: $footer-gradient;
   display: flex;
   align-items: center;
-  height: 56px;
+  height: $nav-height;
   padding: 0 $space-4;
   color: rgba(0, 0, 0, 0.3);
 }

@@ -1,4 +1,8 @@
 class MapsController < ApplicationController
+  # The map is the root page, so it has to be reachable logged out — otherwise
+  # every visitor lands on the sign-in screen instead of the app itself.
+  skip_before_action :authenticate_user!
+
   def index
     @brands = Brand.geocoded
     @collection_points = CollectionPoint.geocoded

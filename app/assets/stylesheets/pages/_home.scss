@@ -14,6 +14,16 @@
   padding-bottom: 10px;
 }
 
+// Page heading for the information page. It now opens the page directly —
+// there is no banner above it to provide the top breathing room.
+.info-title {
+  font-family: $headers-font;
+  font-size: clamp(24px, 5vw, 34px);
+  color: $forest;
+  text-align: center;
+  padding: $space-5 $space-3 $space-4 $space-3;
+}
+
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -150,33 +160,6 @@
   box-shadow: $focus-ring;
 }
 
-.fa-chevron-down {
-  color: white;
-  font-size: 33px;
-  position: relative;
-  // Fixed offset instead of 6vh — that was tuned for the old 70vh banner
-  // and became proportionally too large once the banner was shrunk.
-  bottom: 10px;
-  animation: 2s slide-top 0.5s infinite reverse;
-  right: 50%;
-}
-
-.fa-chevron-down:before {
-  margin: -20px;
-}
-
-@keyframes slide-top {
-  0% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-
-.main-container {
-  margin-bottom: 50px;
-}
 
 .row {
   display: flex;

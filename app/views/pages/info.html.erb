@@ -1,29 +1,8 @@
 <%= render "/shared/header" %>
 
 <div class="main-container">
-  <div class="banner" style="background-image: linear-gradient(rgba(27,67,50,0.55),rgba(45,106,79,0.35)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
-    <h1>Wear the people</h1>
-    <h2>Find your next cool outfits and help cooling down the planet</h2>
-    <% unless user_signed_in?%>
-      <%= link_to "Browse products","products", id: "button-call-to-action" %>
-    <% end %>
-    <% if user_signed_in?%>
-      <div class="searchbar-home" id="seachbar-home">
-        <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
-          <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
-          <div class="button-space">
-            <%= submit_tag "Search", class: "btn-light-green"%>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-    <a href="#articles-list">
-      <i class="fas fa-chevron-down"></i>
-    </a>
-  </div>
-
   <div class="articles" id="articles-list">
-    <h2>The one-stop shop for sustainable fashion</h2>
+    <h1 class="info-title">The one-stop shop for sustainable fashion</h1>
     <div class="pillars-grid">
       <%= link_to listings_path, class: "pillar-card" do %>
         <i class="fas fa-store"></i>
@@ -45,7 +24,7 @@
         <h3>Eco-friendly brands</h3>
         <p>Explore a directory of committed and certified brands.</p>
       <% end %>
-      <%= link_to map_path, class: "pillar-card" do %>
+      <%= link_to root_path, class: "pillar-card" do %>
         <i class="fas fa-map-marked-alt"></i>
         <h3>Map</h3>
         <p>Locate eco-friendly stores and nearby collection or recycling points.</p>

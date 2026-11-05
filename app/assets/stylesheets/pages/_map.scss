@@ -1,3 +1,16 @@
+// The banner is full-bleed, so the map below it needs its own gutters.
+.map-section {
+  padding: $space-4 $space-4 0 $space-4;
+}
+
+#map {
+  width: 100%;
+  // Enough to be usable without pushing the legend off screen on mobile.
+  height: 60vh;
+  min-height: 320px;
+  border-radius: $radius-md;
+}
+
 .map-legend {
   display: flex;
   flex-wrap: wrap;

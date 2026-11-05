@@ -147,7 +147,8 @@ label {
 #list-chevron {
   color: $forest;
   font-size: 1em;
-  bottom: -3px;
-  animation: none;
-  position: unset;
+}
+
+#list-chevron:before {
+  margin: -20px;
 }

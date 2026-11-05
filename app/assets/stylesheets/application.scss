@@ -18,9 +18,20 @@
 @import "components/header";
 @import "components/clickable-avatar";
 
-// standard padding
+// The header and bottom nav are both position:fixed, so they sit outside the
+// document flow. The body is inset by exactly their heights — without the
+// bottom inset the last 56px of every page scrolls underneath the nav bar.
+// Done on body (not per-page) because the two partials are rendered inside
+// many different wrappers, and some pages have no .main-container at all.
+body {
+  padding-top: $header-height;
+  padding-bottom: $nav-height;
+}
+
+// Breathing room between the last block of content and the nav bar. This is
+// spacing only — clearing the nav itself is handled by the body inset above.
 .main-container {
-  padding-bottom: 25px;
+  padding-bottom: $space-5;
 }
 
 html {
