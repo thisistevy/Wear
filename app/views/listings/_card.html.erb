@@ -10,7 +10,7 @@
       <div class="card-product-description trait_below">
         <p><%= listing.condition %></p>
         <p class="product-score">
-          <% if listing.listing_type == "vente" %>
+          <% if listing.listing_type == "sale" %>
             <i class="fas fa-tag"></i> <%= listing.price.to_i %> €
           <% else %>
             <i class="fas fa-recycle"></i> <%= listing.listing_type %>

@@ -7,7 +7,7 @@ class MapsController < ApplicationController
       {
         lat: brand.latitude,
         lng: brand.longitude,
-        type: "boutique",
+        type: "store",
         info_window: render_to_string(partial: "brand_info_window", locals: { brand: brand }),
       }
     end

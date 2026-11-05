@@ -1,13 +1,13 @@
 <%= render "/shared/header" %>
 
 <div class="main-container">
-  <h1>Répertoire des marques éco-friendly</h1>
+  <h1>Eco-friendly brand directory</h1>
 
   <% if @certifications.any? %>
     <div class="searchbar-home">
       <%= simple_form_for :brands_filter, url: brands_path, method: :get do |f| %>
         <%= f.input :certification, label: false, prompt: "Certification", collection: @certifications, required: false %>
-        <%= submit_tag "Filtrer", class: "btn-light-green" %>
+        <%= submit_tag "Filter", class: "btn-light-green" %>
       <% end %>
     </div>
   <% end %>

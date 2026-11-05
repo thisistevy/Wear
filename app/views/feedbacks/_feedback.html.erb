@@ -11,9 +11,9 @@
   </div>
   <br>
   <p class="feedback-ratings">
-    <span>Durabilité : <%= "★" * feedback.rating %><%= "☆" * (5 - feedback.rating) %></span>
-    <span>Lavages : <%= "★" * feedback.wash_resistance %><%= "☆" * (5 - feedback.wash_resistance) %></span>
-    <span>Usure : <%= "★" * feedback.wear_over_time %><%= "☆" * (5 - feedback.wear_over_time) %></span>
+    <span>Durability: <%= "★" * feedback.rating %><%= "☆" * (5 - feedback.rating) %></span>
+    <span>Washes: <%= "★" * feedback.wash_resistance %><%= "☆" * (5 - feedback.wash_resistance) %></span>
+    <span>Wear: <%= "★" * feedback.wear_over_time %><%= "☆" * (5 - feedback.wear_over_time) %></span>
   </p>
   <p><%= feedback.comment %></p>
   <% if feedback.picture_worn.attached? %>

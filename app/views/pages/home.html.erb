@@ -5,14 +5,14 @@
     <h1>Wear the people</h1>
     <h2>Find your next cool outfits and help cooling down the planet</h2>
     <% unless user_signed_in?%>
-      <%= link_to "Voir les produits","products", id: "button-call-to-action" %>
+      <%= link_to "Browse products","products", id: "button-call-to-action" %>
     <% end %>
     <% if user_signed_in?%>
       <div class="searchbar-home" id="seachbar-home">
         <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
-          <%= f.input :query, label: false, required: false, placeholder: "Rechercher un produit", style: "width: 350px" %>
+          <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
           <div class="button-space">
-            <%= submit_tag "Rechercher", class: "btn-light-green"%>
+            <%= submit_tag "Search", class: "btn-light-green"%>
           </div>
         <% end %>
       </div>
@@ -23,34 +23,34 @@
   </div>
 
   <div class="articles" id="articles-list">
-    <h2>Le guichet unique de la mode durable</h2>
+    <h2>The one-stop shop for sustainable fashion</h2>
     <div class="pillars-grid">
       <%= link_to listings_path, class: "pillar-card" do %>
         <i class="fas fa-store"></i>
         <h3>Marketplace</h3>
-        <p>Achetez, revendez ou échangez des vêtements de seconde main près de chez vous.</p>
+        <p>Buy, resell or swap second-hand clothes near you.</p>
       <% end %>
       <%= link_to new_scan_path, class: "pillar-card" do %>
         <i class="fas fa-barcode"></i>
-        <h3>Scan transparence</h3>
-        <p>Scannez un code-barres pour connaître la composition et le score éco-responsable d'un vêtement.</p>
+        <h3>Transparency scan</h3>
+        <p>Scan a barcode to discover a garment's composition and eco score.</p>
       <% end %>
       <%= link_to products_path, class: "pillar-card" do %>
         <i class="fas fa-star"></i>
-        <h3>Score de durabilité</h3>
-        <p>Découvrez la longévité réelle des vêtements, évaluée par la communauté.</p>
+        <h3>Durability score</h3>
+        <p>Find out how long clothes really last, rated by the community.</p>
       <% end %>
       <%= link_to brands_path, class: "pillar-card" do %>
         <i class="fas fa-award"></i>
-        <h3>Marques éco-friendly</h3>
-        <p>Explorez un répertoire de marques engagées et certifiées.</p>
+        <h3>Eco-friendly brands</h3>
+        <p>Explore a directory of committed and certified brands.</p>
       <% end %>
       <%= link_to map_path, class: "pillar-card" do %>
         <i class="fas fa-map-marked-alt"></i>
-        <h3>Carte</h3>
-        <p>Localisez les boutiques éco-friendly et les points de collecte/recyclage à proximité.</p>
+        <h3>Map</h3>
+        <p>Locate eco-friendly stores and nearby collection or recycling points.</p>
       <% end %>
     </div>
-    <h2><%= link_to "À propos", aboutus_path, id:"aboutus-header" %></h2>
+    <h2><%= link_to "About us", aboutus_path, id:"aboutus-header" %></h2>
   </div>
 </div>

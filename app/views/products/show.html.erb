@@ -92,11 +92,11 @@
   </div>
 
   <div class="card-durability-score">
-    <h2>Score de durabilité collaboratif</h2>
+    <h2>Community durability score</h2>
     <% if @product.average_durability_score %>
-      <p class="product-score"><i class="fas fa-star"></i> <%= @product.average_durability_score %>/5 (<%= @product.feedbacks.count %> avis)</p>
+      <p class="product-score"><i class="fas fa-star"></i> <%= @product.average_durability_score %>/5 (<%= @product.feedbacks.count %> reviews)</p>
     <% else %>
-      <p><em>Aucun avis pour le moment — soyez le premier à partager votre retour d'usage !</em></p>
+      <p><em>No reviews yet — be the first to share your experience!</em></p>
     <% end %>
   </div>
 
@@ -125,9 +125,9 @@
       <%= f.label :purchase_date, 'Purchase date' %> <br>
       <%= f.input_field :purchase_date, as: :date, html5: true, required: true %>
       <%= f.input :comment, as: :text, input_html: {style:  'height:80px;', rows: 2}, placeholder: "Tell us what you like/dislike about your product" %>
-      <%= render "feedbacks/star_field", f: f, field: :rating, question: "Note globale de durabilité" %>
-      <%= render "feedbacks/star_field", f: f, field: :wash_resistance, question: "Résistance aux lavages" %>
-      <%= render "feedbacks/star_field", f: f, field: :wear_over_time, question: "Usure dans le temps" %>
+      <%= render "feedbacks/star_field", f: f, field: :rating, question: "Overall durability rating" %>
+      <%= render "feedbacks/star_field", f: f, field: :wash_resistance, question: "Wash resistance" %>
+      <%= render "feedbacks/star_field", f: f, field: :wear_over_time, question: "Wear over time" %>
       <%= f.label :picture_worn, "Upload a picture of your product" %> <br>
       <%= f.input_field :picture_worn, as: :file%>
       <div class='submit-review-btn'>

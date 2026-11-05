@@ -1,16 +1,16 @@
 <%= render "/shared/header" %>
 
 <div class="main-container">
-  <h1>Carte</h1>
+  <h1>Map</h1>
   <div class="map-legend">
-    <span><i class="fas fa-circle" style="color:#AAD576"></i> Boutiques éco-friendly</span>
-    <span><i class="fas fa-circle" style="color:#4A90D9"></i> Points de collecte</span>
-    <span><i class="fas fa-circle" style="color:#F4A259"></i> Points de recyclage</span>
+    <span><i class="fas fa-circle" style="color:#AAD576"></i> Eco-friendly stores</span>
+    <span><i class="fas fa-circle" style="color:#4A90D9"></i> Collection points</span>
+    <span><i class="fas fa-circle" style="color:#F4A259"></i> Recycling points</span>
   </div>
 
   <% if ENV['MAPBOX_API_KEY'].blank? %>
     <p class="alert alert-warning">
-      La clé Mapbox n'est pas configurée (variable <code>MAPBOX_API_KEY</code>). La carte ne peut pas s'afficher pour le moment.
+      The Mapbox key is not configured (<code>MAPBOX_API_KEY</code> variable). The map cannot be displayed for now.
     </p>
   <% end %>
 

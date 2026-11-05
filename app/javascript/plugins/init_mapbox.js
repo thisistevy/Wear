@@ -10,9 +10,9 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const MARKER_COLORS = {
-  boutique: '#AAD576',
-  collecte: '#4A90D9',
-  recyclage: '#F4A259',
+  store: '#AAD576',
+  collection: '#4A90D9',
+  recycling: '#F4A259',
 };
 
 const initMapbox = () => {
@@ -27,7 +27,7 @@ const initMapbox = () => {
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
       const popup = new mapboxgl.Popup().setHTML(marker.info_window);
-      new mapboxgl.Marker({ color: MARKER_COLORS[marker.type] || MARKER_COLORS.boutique })
+      new mapboxgl.Marker({ color: MARKER_COLORS[marker.type] || MARKER_COLORS.store })
         .setLngLat([marker.lng, marker.lat])
         .setPopup(popup)
         .addTo(map);

@@ -18,7 +18,7 @@
     <% end %>
   </div>
 
-  <h2>Produits de <%= @brand.name %></h2>
+  <h2><%= @brand.name %> products</h2>
   <ul class="container-product">
     <% @products.each do |product| %>
       <div id="product-card-<%= product.id %>">

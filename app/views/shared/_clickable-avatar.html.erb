@@ -8,10 +8,10 @@
       <% end %>
     </button>
     <div class="dropdown-menu dropdown-menu-right">
-      <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
-      <%= link_to "Mes annonces", listings_path(mine: true), class: "dropdown-item" %>
-      <%= link_to "Marques éco-friendly", brands_path, class: "dropdown-item" %>
-      <%= link_to "Mes favoris", favorites_path, class: "dropdown-item" %>
+      <%= link_to "My profile", edit_user_registration_path, class: "dropdown-item" %>
+      <%= link_to "My listings", listings_path(mine: true), class: "dropdown-item" %>
+      <%= link_to "Eco-friendly brands", brands_path, class: "dropdown-item" %>
+      <%= link_to "My favourites", favorites_path, class: "dropdown-item" %>
       <div class="dropdown-divider"></div>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
     </div>
