@@ -1,31 +1,33 @@
 <%= render "/shared/header" %>
 
-<div class="main-container">
+<div class="main-container map-page">
   <div class="banner" style="background-image: linear-gradient(rgba(27,67,50,0.55),rgba(45,106,79,0.35)), url('<%= cl_image_path "homepage_background_lbfwxz", height: 1500, crop: :fill %>')">
     <h1>Wear the people</h1>
     <h2>Find your next cool outfits and help cooling down the planet</h2>
-    <% unless user_signed_in? %>
-      <%= link_to "Browse products", "products", id: "button-call-to-action" %>
-    <% end %>
-    <% if user_signed_in? %>
-      <div class="searchbar-home" id="seachbar-home">
-        <%= simple_form_for :products_filter, url: products_path, method: :get do |f| %>
-          <%= f.input :query, label: false, required: false, placeholder: "Search for a product", style: "width: 350px" %>
-          <div class="button-space">
-            <%= submit_tag "Search", class: "btn-light-green" %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+
+    <form id="map-search" class="map-search" role="search">
+      <input type="search" name="place" placeholder="Search a city or an address" aria-label="Search a city or an address">
+      <button type="submit" class="btn-light-green">Search</button>
+    </form>
+    <p id="map-search-feedback" class="map-search-feedback" role="status" aria-live="polite"></p>
+
+    <div class="map-legend" id="map-filters">
+      <button type="button" class="map-filter is-active" data-category="store" aria-pressed="true">
+        <i class="fas fa-circle" style="color:#AAD576"></i> Visit eco-friendly stores
+      </button>
+      <button type="button" class="map-filter is-active" data-category="collection" aria-pressed="true">
+        <i class="fas fa-circle" style="color:#4A90D9"></i> Give your outfits
+      </button>
+      <button type="button" class="map-filter is-active" data-category="recycling" aria-pressed="true">
+        <i class="fas fa-circle" style="color:#F4A259"></i> Recycle your outfit
+      </button>
+      <button type="button" class="map-filter is-active" data-category="sell" aria-pressed="true">
+        <i class="fas fa-circle" style="color:#E08E6D"></i> Sell your outfits
+      </button>
+    </div>
   </div>
 
   <div class="map-section">
-    <div class="map-legend">
-      <span><i class="fas fa-circle" style="color:#AAD576"></i> Eco-friendly stores</span>
-      <span><i class="fas fa-circle" style="color:#4A90D9"></i> Collection points</span>
-      <span><i class="fas fa-circle" style="color:#F4A259"></i> Recycling points</span>
-    </div>
-
     <% if ENV['MAPBOX_API_KEY'].blank? %>
       <p class="alert alert-warning">
         The map cannot be displayed: <code>MAPBOX_API_KEY</code> is not set.

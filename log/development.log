@@ -21693,3 +21693,1196 @@ Processing by BrandsController#show as HTML
 Completed 200 OK in 36ms (Views: 14.1ms | ActiveRecord: 11.5ms | Allocations: 26212)
 
 
+Started GET "/" for ::1 at 2026-11-05 17:43:20 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (1.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.6ms | Allocations: 86)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.4ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/maps/index.html.erb:7
+  Rendered maps/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 2885)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 2.1ms | Allocations: 1375)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 74ms (Views: 54.1ms | ActiveRecord: 11.0ms | Allocations: 21229)
+
+
+Started GET "/" for ::1 at 2026-11-05 17:49:26 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (1.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 1.0ms | Allocations: 81)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.7ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/maps/index.html.erb:7
+  Rendered maps/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2913)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 3.6ms | Allocations: 1372)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 45ms (Views: 25.7ms | ActiveRecord: 4.3ms | Allocations: 21367)
+
+
+Started GET "/" for ::1 at 2026-11-05 17:50:33 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (6.3ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.8ms | Allocations: 81)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.3ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/maps/index.html.erb:7
+  Rendered maps/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 2.7ms | Allocations: 1368)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 46ms (Views: 23.5ms | ActiveRecord: 8.1ms | Allocations: 21176)
+
+
+Started GET "/" for ::1 at 2026-11-05 17:51:37 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (5.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 2.1ms | Allocations: 213)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.5ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.3ms | Allocations: 177)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 186)
+  Rendered maps/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1507)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/LETY_Isabelle/Documents/Perso/Wear/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: 85d470b8a09fed1cc6ba
+Version: webpack 4.46.0
+Time: 1026ms
+Built at: 11/05/2026 5:51:39 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-64d2a8f74de1685ae30c.js   3.42 MiB  application  [emitted] [immutable]  application
+js/application-64d2a8f74de1685ae30c.js.map   3.43 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-64d2a8f74de1685ae30c.js js/application-64d2a8f74de1685ae30c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 195 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/insert_in_list_controller.js] 3.17 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 1.34 KiB {application} [built]
+[./app/javascript/plugins/init_mapbox.js] 5.3 KiB {application} [built]
+[./app/javascript/plugins/init_scan.js] 698 bytes {application} [built]
+[./app/javascript/plugins/slider.js] 2.05 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 280 hidden modules
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 4.4ms | Allocations: 2606)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 182)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 88)
+Completed 200 OK in 2017ms (Views: 1999.9ms | ActiveRecord: 7.9ms | Allocations: 24800)
+
+
+Started GET "/" for ::1 at 2026-11-05 17:51:56 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (2.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.3ms | Allocations: 86)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.2ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered maps/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1031)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/LETY_Isabelle/Documents/Perso/Wear/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+
+[Webpacker] Hash: 85d470b8a09fed1cc6ba
+Version: webpack 4.46.0
+Time: 1176ms
+Built at: 11/05/2026 5:51:59 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-64d2a8f74de1685ae30c.js   3.42 MiB  application  [emitted] [immutable]  application
+js/application-64d2a8f74de1685ae30c.js.map   3.43 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-64d2a8f74de1685ae30c.js js/application-64d2a8f74de1685ae30c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 195 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/insert_in_list_controller.js] 3.17 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 1.34 KiB {application} [built]
+[./app/javascript/plugins/init_mapbox.js] 5.3 KiB {application} [built]
+[./app/javascript/plugins/init_scan.js] 698 bytes {application} [built]
+[./app/javascript/plugins/slider.js] 2.05 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 280 hidden modules
+
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 12.0ms | Allocations: 2341)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 2891ms (Views: 2874.9ms | ActiveRecord: 11.4ms | Allocations: 103344)
+
+
+Started GET "/" for ::1 at 2026-11-05 17:52:35 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (4.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.7ms | Allocations: 81)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.2ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered maps/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 3.2ms | Allocations: 2328)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 40ms (Views: 15.5ms | ActiveRecord: 5.4ms | Allocations: 19475)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-05 17:52:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+turbolinks_render (0.9.21) lib/turbolinks_render/middleware.rb:81:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2026-11-05 17:52:57 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (5.4ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 1.3ms | Allocations: 81)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.8ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered maps/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 3.2ms | Allocations: 2334)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 66ms (Views: 42.4ms | ActiveRecord: 7.9ms | Allocations: 19477)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-05 17:52:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+turbolinks_render (0.9.21) lib/turbolinks_render/middleware.rb:81:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-05 17:52:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+turbolinks_render (0.9.21) lib/turbolinks_render/middleware.rb:81:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2026-11-05 17:53:31 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (2.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 1.1ms | Allocations: 366)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.6ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.3ms | Allocations: 183)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 195)
+  Rendered maps/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3532)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_clickable-avatar.html.erb (Duration: 2.8ms | Allocations: 383)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+Completed 200 OK in 84ms (Views: 52.7ms | ActiveRecord: 12.0ms | Allocations: 90615)
+
+
+Started GET "/" for ::1 at 2026-11-05 17:54:56 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.4ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 58)
+  Rendered maps/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1031)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 41ms (Views: 9.4ms | ActiveRecord: 1.3ms | Allocations: 16791)
+
+
+Started GET "/" for ::1 at 2026-11-05 17:55:02 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.3ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 57)
+  Rendered maps/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 13ms (Views: 8.8ms | ActiveRecord: 0.7ms | Allocations: 16754)
+
+
+Started GET "/info" for ::1 at 2026-11-05 17:55:11 +0100
+Processing by PagesController#info as */*
+  Rendering pages/info.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered pages/info.html.erb within layouts/application (Duration: 1.1ms | Allocations: 865)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 14096)
+
+
+Started GET "/products" for ::1 at 2026-11-05 17:55:13 +0100
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 75)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "products"."gender" FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."category" FROM "products"[0m
+  ↳ app/views/products/index.html.erb:10
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 34], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (1.5ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 34], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 12.9ms | Allocations: 9424)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 35], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.8ms | Allocations: 2961)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 36], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.3ms | Allocations: 2857)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 37], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.3ms | Allocations: 2961)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 38], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.1ms | Allocations: 2856)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 39], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 39], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.3ms | Allocations: 2961)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 40], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 12.4ms | Allocations: 2856)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 41], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.6ms | Allocations: 2863)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 42], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 42], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.4ms | Allocations: 2975)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 43], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 43], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.2ms | Allocations: 2856)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 44], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 44], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.3ms | Allocations: 2962)
+  Rendered products/index.html.erb within layouts/application (Duration: 62.8ms | Allocations: 65583)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.9ms | Allocations: 1883)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 84ms (Views: 58.0ms | ActiveRecord: 16.8ms | Allocations: 93530)
+
+
+Started GET "/brands" for ::1 at 2026-11-05 17:55:14 +0100
+Processing by BrandsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/brands_controller.rb:7:in `flat_map'
+  Rendering brands/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 75)
+  [1m[36mBrand Load (0.8ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."name" ASC[0m
+  ↳ app/views/brands/index.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 1.2ms | Allocations: 2012)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.7ms | Allocations: 1168)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.6ms | Allocations: 1166)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.5ms | Allocations: 1167)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.4ms | Allocations: 1169)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 30], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.4ms | Allocations: 1168)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 26], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.4ms | Allocations: 1168)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 29], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.4ms | Allocations: 1168)
+  Rendered brands/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 13198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 1.1ms | Allocations: 1391)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 1.9ms | Allocations: 30447)
+
+
+Started GET "/listings" for ::1 at 2026-11-05 17:55:14 +0100
+Processing by ListingsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering listings/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 75)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "listings"."category" FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:11
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."status" = $1 ORDER BY "listings"."created_at" DESC[0m  [["status", "available"]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/_card.html.erb:3
+  Rendered listings/_card.html.erb (Duration: 1.9ms | Allocations: 2043)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/_card.html.erb:3
+  Rendered listings/_card.html.erb (Duration: 0.9ms | Allocations: 1159)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 15], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/_card.html.erb:3
+  Rendered listings/_card.html.erb (Duration: 0.7ms | Allocations: 1168)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/_card.html.erb:3
+  Rendered listings/_card.html.erb (Duration: 1.1ms | Allocations: 1167)
+  Rendered listings/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 16589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 1.7ms | Allocations: 1383)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 37ms (Views: 25.1ms | ActiveRecord: 6.9ms | Allocations: 35511)
+
+
+Started GET "/info" for ::1 at 2026-11-05 17:55:14 +0100
+Processing by PagesController#info as */*
+  Rendering pages/info.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 74)
+  Rendered pages/info.html.erb within layouts/application (Duration: 0.4ms | Allocations: 500)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 2.2ms | Allocations: 2335)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.4ms | Allocations: 15757)
+
+
+Started GET "/scans/new" for ::1 at 2026-11-05 17:55:14 +0100
+Processing by ScansController#new as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering scans/new.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered scans/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.9ms | Allocations: 1388)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 18156)
+
+
+Started GET "/" for ::1 at 2026-11-05 17:55:37 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (0.5ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 1.1ms | Allocations: 86)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.5ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:19:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered maps/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 3.9ms | Allocations: 2335)
+  Rendered shared/_flashes.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 50ms (Views: 35.4ms | ActiveRecord: 1.7ms | Allocations: 20270)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-05 17:55:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+turbolinks_render (0.9.21) lib/turbolinks_render/middleware.rb:81:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2026-11-05 17:55:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+actionpack (6.0.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+turbolinks_render (0.9.21) lib/turbolinks_render/middleware.rb:81:in `call'
+railties (6.0.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.0) lib/rack/proxy.rb:63:in `call'
+railties (6.0.4.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.8) lib/puma/configuration.rb:228:in `call'
+puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
+puma (4.3.8) lib/puma/server.rb:472:in `process_client'
+puma (4.3.8) lib/puma/server.rb:328:in `block in run'
+puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4630272887821215915)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddBuysSecondhandToBrands (20261105130000)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mALTER TABLE "brands" ADD "buys_secondhand" boolean DEFAULT FALSE NOT NULL[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20261105130000"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4630272887821215915)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBrand Update All (1.8ms)[0m  [1m[33mUPDATE "brands" SET "buys_secondhand" = $1 WHERE "brands"."name" IN ($2, $3, $4, $5)[0m  [["buys_secondhand", true], ["name", "Angarde"], ["name", "Le Petit Faon"], ["name", "Veja"], ["name", "Patagonia"]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "brands"."name" FROM "brands" WHERE "brands"."buys_secondhand" = $1[0m  [["buys_secondhand", true]]
+Started GET "/" for ::1 at 2026-11-05 18:04:39 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (2.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.7ms | Allocations: 365)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (1.2ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:23:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.3ms | Allocations: 183)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 195)
+  Rendered maps/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3735)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/LETY_Isabelle/Documents/Perso/Wear/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-property-in-object since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-property-in-object", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-private-property-in-object.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: ae74465074f85d383212
+Version: webpack 4.46.0
+Time: 1136ms
+Built at: 11/05/2026 6:04:41 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-4c506f18c77b31403fde.js   3.42 MiB  application  [emitted] [immutable]  application
+js/application-4c506f18c77b31403fde.js.map   3.43 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-4c506f18c77b31403fde.js js/application-4c506f18c77b31403fde.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/controllers sync recursive _controller\.js$] ./app/javascript/controllers sync _controller\.js$ 195 bytes {application} [built]
+[./app/javascript/controllers/index.js] 396 bytes {application} [built]
+[./app/javascript/controllers/insert_in_list_controller.js] 3.17 KiB {application} [optional] [built]
+[./app/javascript/packs/application.js] 1.34 KiB {application} [built]
+[./app/javascript/plugins/init_mapbox.js] 6.75 KiB {application} [built]
+[./app/javascript/plugins/init_scan.js] 698 bytes {application} [built]
+[./app/javascript/plugins/slider.js] 2.05 KiB {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {application} [built]
+    + 280 hidden modules
+
+  Rendered shared/_clickable-avatar.html.erb (Duration: 2.6ms | Allocations: 388)
+  Rendered shared/_flashes.html.erb (Duration: 0.3ms | Allocations: 190)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+Completed 200 OK in 1898ms (Views: 1869.4ms | ActiveRecord: 10.7ms | Allocations: 89151)
+
+
+Started GET "/" for ::1 at 2026-11-05 18:05:17 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.3ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:23:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered maps/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1225)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 39ms (Views: 33.1ms | ActiveRecord: 0.9ms | Allocations: 17425)
+
+
+Started GET "/" for ::1 at 2026-11-05 18:05:17 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 82)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.2ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:23:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 57)
+  Rendered maps/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.4ms | Allocations: 17410)
+
+
+Started GET "/" for ::1 at 2026-11-05 18:05:17 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 82)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.2ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.2ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:23:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 57)
+  Rendered maps/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 17410)
+
+
+Started GET "/" for ::1 at 2026-11-05 18:05:23 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (0.6ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.3ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:23:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 57)
+  Rendered maps/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.1ms | Allocations: 84)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.8ms | Allocations: 17392)
+
+
+Started GET "/" for ::1 at 2026-11-05 18:05:26 +0100
+Processing by MapsController#index as */*
+  [1m[36mBrand Load (0.3ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 81)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.2ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:23:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 57)
+  Rendered maps/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1224)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 22.0ms | Allocations: 13338)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 25)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 32ms (Views: 20.0ms | ActiveRecord: 9.7ms | Allocations: 31134)
+
+
+Started GET "/info" for ::1 at 2026-11-05 18:05:26 +0100
+Processing by PagesController#info as */*
+  Rendering pages/info.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 75)
+  Rendered pages/info.html.erb within layouts/application (Duration: 0.7ms | Allocations: 865)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 2.5ms | Allocations: 2335)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.4ms | Allocations: 17240)
+
+
+Started GET "/brands" for ::1 at 2026-11-05 18:05:26 +0100
+Processing by BrandsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands"[0m
+  ↳ app/controllers/brands_controller.rb:7:in `flat_map'
+  Rendering brands/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 75)
+  [1m[36mBrand Load (1.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" ORDER BY "brands"."name" ASC[0m
+  ↳ app/views/brands/index.html.erb:16
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 25], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 2.4ms | Allocations: 2017)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 31], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 1.2ms | Allocations: 1168)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 27], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.8ms | Allocations: 1166)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.9ms | Allocations: 1167)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 28], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.7ms | Allocations: 1169)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 30], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.8ms | Allocations: 1168)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 26], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.8ms | Allocations: 1168)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 29], ["record_type", "Brand"], ["name", "logo"], ["LIMIT", 1]]
+  ↳ app/views/brands/_card.html.erb:3
+  Rendered brands/_card.html.erb (Duration: 0.6ms | Allocations: 1168)
+  Rendered brands/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 21280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 2.2ms | Allocations: 1391)
+  Rendered shared/_flashes.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 41ms (Views: 36.3ms | ActiveRecord: 2.4ms | Allocations: 39004)
+
+
+Started GET "/listings" for ::1 at 2026-11-05 18:05:26 +0100
+Processing by ListingsController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering listings/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 75)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "listings"."category" FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:11
+  [1m[36mListing Load (0.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."status" = $1 ORDER BY "listings"."created_at" DESC[0m  [["status", "available"]]
+  ↳ app/views/listings/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 17], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/_card.html.erb:3
+  Rendered listings/_card.html.erb (Duration: 1.4ms | Allocations: 2047)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 16], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/_card.html.erb:3
+  Rendered listings/_card.html.erb (Duration: 0.6ms | Allocations: 1159)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 15], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/_card.html.erb:3
+  Rendered listings/_card.html.erb (Duration: 0.6ms | Allocations: 1168)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/_card.html.erb:3
+  Rendered listings/_card.html.erb (Duration: 0.5ms | Allocations: 1167)
+  Rendered listings/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 16703)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.7ms | Allocations: 1383)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 37ms (Views: 14.8ms | ActiveRecord: 4.6ms | Allocations: 36093)
+
+
+Started GET "/products" for ::1 at 2026-11-05 18:05:26 +0100
+Processing by ProductsController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 75)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "products"."gender" FROM "products"[0m
+  ↳ app/views/products/index.html.erb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "products"."category" FROM "products"[0m
+  ↳ app/views/products/index.html.erb:10
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 34], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 34], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 6.0ms | Allocations: 6900)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 35], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.6ms | Allocations: 2963)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 36], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.3ms | Allocations: 2857)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 37], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.2ms | Allocations: 2963)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 38], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.0ms | Allocations: 2856)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 39], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 39], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.1ms | Allocations: 2963)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 40], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.0ms | Allocations: 2856)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 41], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.0ms | Allocations: 2856)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 42], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 42], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.1ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.2ms | Allocations: 2977)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 43], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 43], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mCACHE Brand Load (0.0ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.2ms | Allocations: 2856)
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 44], ["record_type", "Product"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:3
+  [1m[36mFavorite Load (0.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = $1 AND "favorites"."product_id" = $2 LIMIT $3[0m  [["user_id", 21], ["product_id", 44], ["LIMIT", 1]]
+  ↳ app/models/product.rb:35:in `favorite?'
+  [1m[36mBrand Load (0.2ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE "brands"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/views/products/_card.html.erb:20
+  Rendered products/_card.html.erb (Duration: 1.2ms | Allocations: 2964)
+  Rendered products/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 54883)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 0.6ms | Allocations: 1371)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 40ms (Views: 29.0ms | ActiveRecord: 7.3ms | Allocations: 74622)
+
+
+Started GET "/" for ::1 at 2026-11-05 18:05:34 +0100
+Processing by MapsController#index as HTML
+  [1m[36mBrand Load (0.9ms)[0m  [1m[34mSELECT "brands".* FROM "brands" WHERE (brands.latitude IS NOT NULL AND brands.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:10:in `map'
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.7ms | Allocations: 86)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.4ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.1ms | Allocations: 69)
+  Rendered maps/_brand_info_window.html.erb (Duration: 0.0ms | Allocations: 69)
+  [1m[36mCollectionPoint Load (0.4ms)[0m  [1m[34mSELECT "collection_points".* FROM "collection_points" WHERE (collection_points.latitude IS NOT NULL AND collection_points.longitude IS NOT NULL)[0m
+  ↳ app/controllers/maps_controller.rb:23:in `map'
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 21)
+  Rendered maps/_collection_point_info_window.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendering maps/index.html.erb within layouts/application
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered maps/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1336)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 21], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_clickable-avatar.html.erb:4
+  Rendered shared/_clickable-avatar.html.erb (Duration: 3.7ms | Allocations: 2341)
+  Rendered shared/_flashes.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 240ms (Views: 124.4ms | ActiveRecord: 2.1ms | Allocations: 20916)
+
+

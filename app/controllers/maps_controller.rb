@@ -11,7 +11,11 @@ class MapsController < ApplicationController
       {
         lat: brand.latitude,
         lng: brand.longitude,
+        # `type` drives the marker colour; `categories` drives the filters. A
+        # shop that buys second-hand belongs to two filters at once, so the two
+        # cannot be the same field.
         type: "store",
+        categories: brand.buys_secondhand ? %w[store sell] : %w[store],
         info_window: render_to_string(partial: "brand_info_window", locals: { brand: brand }),
       }
     end
@@ -21,6 +25,7 @@ class MapsController < ApplicationController
         lat: point.latitude,
         lng: point.longitude,
         type: point.point_type,
+        categories: [point.point_type],
         info_window: render_to_string(partial: "collection_point_info_window", locals: { point: point }),
       }
     end
