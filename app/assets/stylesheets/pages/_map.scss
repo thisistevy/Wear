@@ -79,6 +79,15 @@
   justify-content: center;
 }
 
+.map-count {
+  margin: $space-2 0 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: $white;
+  opacity: 0.85;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 .map-filter {
   display: inline-flex;
   align-items: center;

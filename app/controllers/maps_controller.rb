@@ -25,7 +25,7 @@ class MapsController < ApplicationController
         lat: point.latitude,
         lng: point.longitude,
         type: point.point_type,
-        categories: [point.point_type],
+        categories: point.categories,
         info_window: render_to_string(partial: "collection_point_info_window", locals: { point: point }),
       }
     end

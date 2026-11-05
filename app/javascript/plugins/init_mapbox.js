@@ -8,43 +8,61 @@ const fitMapToMarkers = (map, markers, duration = 0) => {
   map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration });
 };
 
-// Toggles marker visibility from the legend chips. Markers carry a list of
-// categories rather than a single type, because a shop that buys second-hand
-// is both a "store" and a "sell" point and must answer to both filters.
+// Filters markers from the legend chips.
+//
+// Selection is exclusive: picking a chip shows that category only, and picking
+// it again clears the filter. Multi-select was tried first and read as broken,
+// because most points carry several categories (a charity shop both collects
+// and resells), so switching one chip off still left it matching another and
+// barely anything disappeared.
 const initFilters = (map, entries) => {
   const container = document.getElementById('map-filters');
   if (!container) return;
 
   const buttons = Array.from(container.querySelectorAll('.map-filter'));
+  let selected = null; // null means "no filter, show everything"
 
   const apply = () => {
-    const active = buttons
-      .filter(button => button.classList.contains('is-active'))
-      .map(button => button.dataset.category);
-
     const visible = [];
     entries.forEach(({ data, marker }) => {
-      const shown = data.categories.some(category => active.includes(category));
+      const shown = selected === null || data.categories.includes(selected);
       marker.getElement().style.display = shown ? '' : 'none';
       if (shown) visible.push(data);
     });
+
+    buttons.forEach((button) => {
+      const on = selected === null || button.dataset.category === selected;
+      button.classList.toggle('is-active', on);
+      button.setAttribute('aria-pressed', String(button.dataset.category === selected));
+    });
+
+    const count = document.getElementById('map-count');
+    if (count) {
+      const label = selected
+        ? container.querySelector(`[data-category="${selected}"]`).dataset.label
+        : 'places';
+      count.textContent = `${visible.length} ${label}`;
+    }
 
     fitMapToMarkers(map, visible, 800);
   };
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      button.classList.toggle('is-active');
-      button.setAttribute('aria-pressed', button.classList.contains('is-active'));
+      selected = selected === button.dataset.category ? null : button.dataset.category;
       apply();
     });
   });
+
+  apply();
 };
 
+// Keys must stay in sync with CollectionPoint::POINT_TYPES.
 const MARKER_COLORS = {
   store: '#AAD576',
   collection: '#4A90D9',
   recycling: '#F4A259',
+  resale: '#E08E6D',
 };
 
 // Wires the page's own search bar to the map, replacing Mapbox's floating

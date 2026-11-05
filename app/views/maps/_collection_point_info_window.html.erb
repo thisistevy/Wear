@@ -4,3 +4,6 @@
 <% if point.description.present? %>
   <p><%= point.description %></p>
 <% end %>
+<% if point.website.present? %>
+  <p><%= link_to "Visit website", point.website, target: "_blank", rel: "noopener" %></p>
+<% end %>

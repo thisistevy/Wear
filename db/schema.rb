@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2026_11_05_130000) do
+ActiveRecord::Schema.define(version: 2026_11_05_140000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,7 +69,12 @@ ActiveRecord::Schema.define(version: 2026_11_05_130000) do
     t.bigint "brand_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "source"
+    t.string "external_id"
+    t.string "categories", default: [], array: true
+    t.string "website"
     t.index ["brand_id"], name: "index_collection_points_on_brand_id"
+    t.index ["source", "external_id"], name: "index_collection_points_on_source_and_external_id", unique: true
   end
 
   create_table "favorites", force: :cascade do |t|
