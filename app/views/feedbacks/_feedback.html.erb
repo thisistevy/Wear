@@ -1,7 +1,7 @@
 <div class="card-feedbacks">
   <div class="feedback-header">
     <% if feedback.user.avatar.attached? %>
-      <%= cl_image_tag src= feedback.user.avatar.key, class:"avatar" %>
+      <%= image_tag feedback.user.avatar, class: "avatar" %>
     <% end %>
     <div class="together" style="line-height: 8px;">
       <p id="feedback-<%= feedback.id %>">
@@ -17,6 +17,6 @@
   </p>
   <p><%= feedback.comment %></p>
   <% if feedback.picture_worn.attached? %>
-    <%= cl_image_tag(feedback.picture_worn.key, class: "feedback-img", crop: :fill) %>
+    <%= image_tag feedback.picture_worn, class: "feedback-img" %>
   <% end %>
 </div>

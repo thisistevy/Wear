@@ -16,6 +16,10 @@ class MapsController < ApplicationController
         # cannot be the same field.
         type: "store",
         categories: brand.buys_secondhand ? %w[store sell] : %w[store],
+        # Plain name/address for the side list. It can't reuse info_window:
+        # that's rendered HTML meant for a popup, not readable fields.
+        name: brand.name,
+        address: brand.address,
         info_window: render_to_string(partial: "brand_info_window", locals: { brand: brand }),
       }
     end
@@ -26,6 +30,8 @@ class MapsController < ApplicationController
         lng: point.longitude,
         type: point.point_type,
         categories: point.categories,
+        name: point.name,
+        address: point.address,
         info_window: render_to_string(partial: "collection_point_info_window", locals: { point: point }),
       }
     end

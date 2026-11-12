@@ -14,6 +14,17 @@
   }
 }
 
+// The vision image used to be a Cloudinary tag that carried its own sizing and
+// rounding; served as a plain asset it needs both from CSS instead.
+.aboutus-vision-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: $space-4;
+  box-shadow: $shadow-md;
+}
+
 .aboutus-button {
   margin-top: $space-7;
 }

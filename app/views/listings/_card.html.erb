@@ -1,7 +1,7 @@
 <div class="card-product">
   <%= link_to listing_path(listing) do %>
     <% if listing.picture.attached? %>
-      <%= cl_image_tag(listing.picture.key, class: "card-product-img") %>
+      <%= image_tag listing.picture, class: "card-product-img" %>
     <% else %>
       <div class="card-product-placeholder"><i class="fas fa-recycle"></i></div>
     <% end %>

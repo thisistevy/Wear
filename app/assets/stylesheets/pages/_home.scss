@@ -82,11 +82,11 @@
                        // ancestor, so its "bottom" offset was relative to
                        // the nearest positioned element up the tree instead
                        // of the banner itself.
-  background-size: cover;
-  background-position: center;
-  // Falls back to the forest/moss gradient on its own if the background
-  // image (set inline, per-product/brand asset) fails to load.
+  // Plain brand gradient, no photo. $forest stays as a fallback for the rare
+  // browser that won't render the gradient, so the white text keeps its
+  // contrast either way.
   background-color: $forest;
+  background-image: linear-gradient(160deg, $forest 0%, $moss 55%, $leaf 100%);
   // Reduced from 70vh — the hero was taking up most of the screen before
   // any actual content (pillar cards) was visible.
   min-height: 40vh;

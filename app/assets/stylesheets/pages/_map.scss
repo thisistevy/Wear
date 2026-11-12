@@ -15,11 +15,116 @@
   padding: $space-4;
 }
 
-#map {
+// Map and list side by side. Below 900px there isn't room for both, so the
+// list drops under the map rather than squeezing it to an unusable width.
+.map-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-4;
   flex: 1;
+  min-height: 0; // lets the grid shrink inside the flex column instead of
+                 // forcing .map-section taller than the viewport.
+}
+
+@media (min-width: 900px) {
+  .map-layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+}
+
+#map {
   width: 100%;
-  min-height: 300px;
+  min-height: 420px;
   border-radius: $radius-md;
+}
+
+.map-list {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: $white;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  padding: $space-3;
+}
+
+// Sits above the count. Empty until a search is made, and collapsed while it
+// is, so the panel doesn't open on a blank line.
+.map-list-query {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: $charcoal;
+
+  &:not(:empty) {
+    margin-bottom: $space-1;
+  }
+}
+
+.map-list-count {
+  margin: 0 0 $space-2 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: $forest;
+}
+
+.map-list-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.map-list-item {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  padding: $space-2;
+  border: none;
+  border-radius: $radius-sm;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background: $mint;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: $focus-ring;
+  }
+}
+
+.map-list-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: $charcoal;
+}
+
+.map-list-type {
+  font-size: 12px;
+  color: $moss;
+
+  // Colour dot matching the marker on the map, so a row can be traced back to
+  // its pin. --dot-color is set per item in init_mapbox.js from MARKER_COLORS.
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background: var(--dot-color, #{$leaf});
+  }
+}
+
+.map-list-address {
+  font-size: 12px;
+  color: $charcoal;
+  opacity: 0.7;
 }
 
 // Page-level place search. It replaces Mapbox's floating in-map geocoder, so
@@ -30,7 +135,8 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: $space-4 auto $space-1 auto;
-  max-width: 480px;
+  // Wide enough for the full placeholder, which lists the four actions.
+  max-width: 560px;
 
   input[type="search"] {
     flex: 1 1 240px;
@@ -57,13 +163,18 @@
 }
 
 .map-search-feedback {
-  // Reserves one line so the legend below does not jump when a result comes in.
-  min-height: 18px;
-  margin: 0 0 $space-2 0;
+  // Collapses while empty — which is most of the time — so the filters sit
+  // directly under the search bar instead of behind a permanently blank line.
+  // It only takes up room once a search has actually returned something.
+  margin: 0;
   font-size: 14px;
   color: $white;
   opacity: 0.9;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+  &:not(:empty) {
+    margin: $space-1 0;
+  }
 
   &.is-error {
     color: $mint;
@@ -77,16 +188,9 @@
   flex-wrap: wrap;
   gap: $space-1 $space-2;
   justify-content: center;
+  margin-top: $space-2;
 }
 
-.map-count {
-  margin: $space-2 0 0 0;
-  font-size: 13px;
-  font-weight: 600;
-  color: $white;
-  opacity: 0.85;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
 
 .map-filter {
   display: inline-flex;
@@ -100,21 +204,22 @@
   cursor: pointer;
   transition: background-color 0.15s ease-in-out, opacity 0.15s ease-in-out;
 
-  // Switched off: the chip stays readable but clearly recedes, so it reads as
-  // "filter available" rather than "disabled".
-  background-color: transparent;
+  // Resting state. No filter is applied at that point, so the chip has to look
+  // like an available choice rather than a dimmed, switched-off one.
+  background-color: rgba(255, 255, 255, 0.16);
   color: $white;
-  opacity: 0.55;
 
+  // Selected: solid white pill, so the one active filter is unmistakable
+  // against the three others.
   &.is-active {
-    background-color: rgba(255, 255, 255, 0.22);
+    background-color: $white;
     border-color: transparent;
-    opacity: 1;
-    font-weight: 600;
+    color: $forest;
+    font-weight: 700;
   }
 
-  &:hover {
-    opacity: 1;
+  &:hover:not(.is-active) {
+    background-color: rgba(255, 255, 255, 0.3);
   }
 
   &:focus-visible {

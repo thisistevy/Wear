@@ -1,7 +1,7 @@
 <div class="card-product">
   <%= link_to product_path(product) do %>
     <% if product.picture.attached? %>
-      <%= cl_image_tag (product.picture.key), class: "card-product-img"%>
+      <%= image_tag product.picture, class: "card-product-img" %>
     <% else %>
       <div class="card-product-placeholder"><i class="fas fa-tshirt"></i></div>
     <% end %>
